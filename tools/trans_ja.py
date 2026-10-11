@@ -370,7 +370,7 @@ DESC_SLOTS = [
  (0x213d10,"Take the lead along our route","道中は先頭を歩いて案内して"),
  (0x213d18,"Travel at my side","私の隣を歩いて"),
  (0x213d20,"Keep to the rear","後ろを歩いて"),
- (0x213d28,"Stay here and make yourselves at home","ここでくつろいで"),
+ (0x213d28,"Stay here and make yourselves at home","ここに残ってくつろいで"),
  (0x213d30,"Return travel and rest to Skyrim or your follower framework","移動と休憩を、Skyrim本来の動作または従者フレームワークに戻す"),
  (0x213d38,"Travel in the formation you drew in Travel settings","Travel設定で描いた隊列で移動する"),
 ]
