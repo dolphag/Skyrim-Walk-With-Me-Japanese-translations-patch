@@ -31,7 +31,9 @@ python3 -I tools/fwm_emu_stub.py out.dll report.json                # dispatch/s
 ## Notes
 - For 0.1.0 only (addresses are fixed).
 - Translations were produced with AI assistance (Claude, Anthropic) and checked in game.
-- The scripts and the table are provided under GPL-3.0-or-later, like the rest of this repository.
+- The scripts and the Japanese column of the table are mine and are provided under GPL-3.0-or-later, like the rest of this repository.
+  The English column reproduces strings of Fight With Me, which belong to its author (the original ships without a license file); it is included only so that the patch can be reproduced, and is not covered by this repository's license.
+- This folder lives in the repository of the Walk With Me patch because both patches share the same tooling approach; the two patches are independent.
 
 ## 日本語
 [Fight With Me](https://www.nexusmods.com/skyrimspecialedition/mods/194766) **0.1.0** の日本語化パッチのスクリプトと翻訳表です。
