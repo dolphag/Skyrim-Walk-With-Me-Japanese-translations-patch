@@ -101,7 +101,7 @@ def patch_slot(slot, en, ja):
     changes.append((fo, 8, 'slot@%x' % slot))
 for slot, en, ja in tr.SLOTS + tr.DESC_SLOTS: patch_slot(slot, en, ja)
 for i, (en, ja) in enumerate(tr.EMBLEMS.items()):
-    patch_slot(0x214078 + 16 * i, en, ja)
+    patch_slot(0x214068 + 16 * i, en, ja)
 
 # 3b) ホイールの命令説明(関数内leaを直接付け替え)
 for a, en, ja in tr.WHEEL_LEA + tr.ACTION_LEA:
@@ -166,7 +166,7 @@ for la, ia, en, ja in tr.FMT_SITES:
     jb = ja.encode('utf-8')
     patch_lea({'addr': la, 'dispoff': 3}, old_va, add(jb + b'\0')); n_sites += 1
     fo = tx_off(ia) + 7
-    assert bytes(raw[tx_off(ia):tx_off(ia)+7]) == bytes.fromhex('48c785b8080000') and struct.unpack_from('<I', raw, fo)[0] == len(en)
+    assert bytes(raw[tx_off(ia):tx_off(ia)+7]) == bytes.fromhex('48c785a8080000') and struct.unpack_from('<I', raw, fo)[0] == len(en)
     data[fo:fo+4] = struct.pack('<I', len(jb)); changes.append((fo, 4, 'fmtlen@%x' % ia))
 
 # 3f) 定数の付け替え (movss xmm,[rip+disp])

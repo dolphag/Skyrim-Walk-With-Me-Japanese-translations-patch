@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Walk With Me 0.2.5 設定メニュー日本語訳（英語原文 -> 日本語）
+# Walk With Me 0.3.0 設定メニュー日本語訳（英語原文 -> 日本語）
 # 方針: ページ名(Party/Travel/Roles/...)、モード名(Natural/Lead/Companion/Rear/Relax/Vanilla/Custom)、
 #       Classic/TETHER/Nearest、NFF/OAR/FPI などの固有名はホイール・ツリー側が英語のままなので原文を保つ。
 T = {
@@ -353,12 +353,12 @@ COMBOS = {
 
 # ポインタ表(.rdata内のスロット)で参照される表示名: (スロットVA, 原文, 訳)
 SLOTS = [
- (0x214290,"Enable / disable","有効 / 無効の切り替え"),
- (0x2142b0,"Cycle formation","隊列の切り替え"),
- (0x214330,"Reload INI","INIの再読み込み"),
- (0x214350,"Companion control","従者の制御"),
- (0x214370,"Hold hands","手つなぎ"),
- (0x214270,"Party orders","パーティ命令"),
+ (0x214280,"Enable / disable","有効 / 無効の切り替え"),
+ (0x2142a0,"Cycle formation","隊列の切り替え"),
+ (0x214320,"Reload INI","INIの再読み込み"),
+ (0x214340,"Companion control","従者の制御"),
+ (0x214360,"Hold hands","手つなぎ"),
+ (0x214260,"Party orders","パーティ命令"),
 ]
 EMBLEMS = {"Band":"一団","Banner":"旗印","Crown":"王冠","Castle":"城","Swords":"剣","Dragon":"ドラゴン",
  "Wolf":"オオカミ","Raven":"ワタリガラス","Stag":"牡鹿","Steed":"軍馬","Pine":"松","Rune":"ルーン",
@@ -378,59 +378,63 @@ DESC_SLOTS = [
 # ホイール(WalkWithMeOrders)の命令説明: 関数 0xc6350 内の lea reg,[rip+disp32] を直接付け替える。
 # (addr, 原文, 訳)  ポインタのみ・NUL終端文字列(ImDrawList_AddText)なので長さ固定の問題は無い。
 WHEEL_LEA = [
- (0xc8769, "Find your own pace",           "好きなペースで進んでくれ"),
- (0xc8777, "Take the road ahead",          "前を歩いて案内してくれ"),
- (0xc8785, "Stay by my side",              "私のそばにいてくれ"),
- (0xc8793, "Watch our backs",              "背後を見張ってくれ"),
- (0xc87a1, "Make yourselves at home",      "くつろいでいてくれ"),
- (0xc87af, "Return to follower AI",        "従者AIに戻す"),
- (0xc87bd, "Walk as I drew it",            "描いた隊列で歩いてくれ"),
- (0xc8a19, "Draw one in Travel settings",  "Travel設定で描いてくれ"),
+ (0xc8ac4, "Find your own pace",           "好きなペースで進んでくれ"),
+ (0xc8ad2, "Take the road ahead",          "前を歩いて案内してくれ"),
+ (0xc8ae0, "Stay by my side",              "私のそばにいてくれ"),
+ (0xc8aee, "Watch our backs",              "背後を見張ってくれ"),
+ (0xc8afc, "Make yourselves at home",      "くつろいでいてくれ"),
+ (0xc8b0a, "Return to follower AI",        "従者AIに戻す"),
+ (0xc8b18, "Walk as I drew it",            "描いた隊列で歩いてくれ"),
+ (0xc8d69, "Draw one in Travel settings",  "Travel設定で描いてくれ"),
 ]
 
 # ---- Party Actions(ホイール) ----
 # (a) strlen経由でstd::stringを作る箇所: lea のみ付け替え
 ACTION_LEA = [
- (0xc70f4, "Saving...",            "保存中..."),
- (0xc70fd, "Settle when you stop", "止まったらくつろぐ"),
- (0xc7104, "Keep to your feet",    "立ったまま待機"),
- (0xc73d7, "Guiding",              "案内中"),
- (0xc73de, "Follower AI",          "従者AI"),
+ (0xc73b7, "Saving...",            "保存中..."),
+ (0xc73c0, "Settle when you stop", "止まったらくつろぐ"),
+ (0xc73c7, "Keep to your feet",    "立ったまま待機"),
+ (0xc769a, "Guiding",              "案内中"),
+ (0xc76a1, "Follower AI",          "従者AI"),
+ (0xc7e30, "Roles and tactics",     "役割と戦術"),
+ (0xc7e37, "Needs Fight With Me",   "Fight With Meが必要"),
 ]
-# (b) 下部の説明(ポインタ表 0x219590 の7スロット)
+# (b) 下部の説明(ポインタ表 0x2195a0 の7スロット)
 HINT_SLOTS = [
- (0x219590, "Bring every travelling companion to clear ground beside you, even from another cell.",
+ (0x2195a0, "Bring every travelling companion to clear ground beside you, even from another cell.",
             "旅の従者を全員、別のセルにいても近くの開けた場所へ呼び寄せる。"),
- (0x219598, "When you stop, the party settles in nearby. Off: they wait on their feet.",
+ (0x2195a8, "When you stop, the party settles in nearby. Off: they wait on their feet.",
             "立ち止まると、パーティは近くでくつろぐ。オフの場合は立ったまま待つ。"),
- (0x2195a0, "Take or return control of the companion you were looking at.",
+ (0x2195b0, "Take or return control of the companion you were looking at.",
             "見ていた従者の制御を引き継ぐ、または返す。"),
- (0x2195a8, "Switch party guidance on or off. Off hands everyone back to their own AI.",
+ (0x2195b8, "Switch party guidance on or off. Off hands everyone back to their own AI.",
             "パーティの案内をオン/オフに切り替える。オフにすると全員が各自のAIに戻る。"),
- (0x2195b0, "Walk hand in hand with your chosen partner in Companion mode.",
+ (0x2195c0, "Walk hand in hand with your chosen partner in Companion mode.",
             "Companionモードで、選んだ相手と手をつないで歩く。"),
- (0x2195b8, "Your finder points out chests, bodies and valuables worth a look.",
+ (0x2195c8, "Your finder points out chests, bodies and valuables worth a look.",
             "探索役が、宝箱や死体、調べる価値のある品を教えてくれる。"),
- (0x2195c0, "Your pathfinder points out places you have never found, in Natural, Lead and Companion.",
+ (0x2195d0, "Your pathfinder points out places you have never found, in Natural, Lead and Companion.",
             "Pathfinderが、まだ見つけていない場所を教えてくれる(Natural、Lead、Companion時)。"),
+ (0x2195d8, "Give each companion a role, a focus and a place in battle. Comes with Fight With Me.",
+            "従者それぞれに、役割・狙う相手・戦闘での持ち場を与える。Fight With Meを導入すると使える。"),
 ]
 # (c) コード内で文字をコピーしている箇所: 命令列を std::string コンストラクタ呼び出しに置換
 #     (region_start, region_end, 出力先 rbp+off, 原文, 訳)
 INLINE = [
- (0xc6e96, 0xc6ee4, 0x828, "Teleport queued",    "テレポート待機中"),
- (0xc7271, 0xc72b4, 0x8b0, "Look at a companion","従者を見る"),
- (0xc7573, 0xc75a2, 0x900, "Choose a partner",   "相手を選ぶ"),
- (0xc781a, 0xc785a, 0x850, "Any companion",      "どの従者でも"),
- (0xc7986, 0xc79bf, 0x900, "Not in this style",  "この命令では不可"),
- (0xc79f1, 0xc7a31, 0x828, "Curious first",      "好奇心旺盛な従者が先"),
+ (0xc7145, 0xc7193, 0x858, "Teleport queued",    "テレポート待機中"),
+ (0xc7534, 0xc7577, 0x880, "Look at a companion","従者を見る"),
+ (0xc7836, 0xc7865, 0x8a0, "Choose a partner",   "相手を選ぶ"),
+ (0xc7ac5, 0xc7b05, 0x858, "Any companion",      "どの従者でも"),
+ (0xc7c1d, 0xc7c56, 0x900, "Not in this style",  "この命令では不可"),
+ (0xc7c88, 0xc7cc8, 0x858, "Curious first",      "好奇心旺盛な従者が先"),
 ]
 # (d) fmt 書式(ポインタ+長さ): (lea addr, 長さ即値addr+7, 原文, 訳)  ※第2引数("s")は未使用になる
-FMT_SITES = [(0xc6f59, 0xc6f67, "{} companion{} ready", "{}人の従者が準備完了")]
+FMT_SITES = [(0xc7208, 0xc7216, "{} companion{} ready", "{}人の従者が準備完了")]
 # (e) ホイール中央の説明の文字サイズ: movss xmm,[rip+disp] を新定数へ付け替え (addr, 旧値, 新値)
 CONST_SITES = [
- (0xc87ea, 0.33, 0.40),    # 説明の最大幅  (旧 0.33)
- (0xc87f3, 0.02, 0.028),   # 説明の文字サイズ上限 (旧 0.02)
- (0xb8b7d, 0.02, 0.028),   # Party Actions 下部の説明: 文字サイズ上限 (mulss)
- (0xb8b60, 0.88, 1.25),    # Party Actions 下部の説明: 最大幅 (mulss)
- (0xc9557, 0.017, 0.024),  # 下端の操作ヒント(Click / arrows: ...): 文字サイズ上限 (mulss)
+ (0xc8b45, 0.33, 0.40),    # 説明の最大幅  (旧 0.33)
+ (0xc8b4e, 0.02, 0.028),   # 説明の文字サイズ上限 (旧 0.02)
+ (0xb9052, 0.02, 0.028),   # Party Actions 下部の説明: 文字サイズ上限 (mulss)
+ (0xb9035, 0.88, 1.25),    # Party Actions 下部の説明: 最大幅 (mulss)
+ (0xc999b, 0.017, 0.024),  # 下端の操作ヒント(Click / arrows: ...): 文字サイズ上限 (mulss)
 ]

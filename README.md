@@ -3,16 +3,17 @@
 [日本語版 / Japanese](README.ja.md)
 
 Source, translation table and build scripts for **Walk With Me - Japanese Translations Patch**, a Japanese
-translation patch for [Walk With Me](https://www.nexusmods.com/skyrimspecialedition/mods/191283) **0.2.5**
+translation patch for [Walk With Me](https://www.nexusmods.com/skyrimspecialedition/mods/191283) **0.3.0**
 (Skyrim SE/AE mod by hashhbbrown). The mod keeps its UI strings inside `Wayfarer.dll`, so the patch
 works by modifying the DLL directly.
 
-> **Status:** for Walk With Me **0.2.5 only** (addresses are fixed). It is not released yet.
-> This repository contains **no DLL and no font files**: you need your own copy of the original 0.2.5 DLL.
+> **Status:** for Walk With Me **0.3.0 only** (addresses are fixed). It is not released yet.
+> The 0.2.5 version of these scripts is in the first commit of this repository.
+> This repository contains **no DLL and no font files**: you need your own copy of the original 0.3.0 DLL.
 
 ## What the patch does
 - Translates the settings pages (Party / Travel / Rest / Roles / Interface / Controls), the order
-  descriptions, and the descriptions on the order wheel and Party Actions (309 English → Japanese pairs,
+  descriptions, and the descriptions on the order wheel and Party Actions (312 English → Japanese pairs,
   see [`translations_en_ja.csv`](translations_en_ja.csv)).
 - Replaces `SKSE/Plugins/Fonts/WalkWithMeInscription.ttf` with a merged font: the original Cinzel Decorative
   for Latin letters/digits (so mode names such as "Natural" keep their look) plus a Noto Sans JP subset for
@@ -25,6 +26,8 @@ works by modifying the DLL directly.
   | Party Actions footer description | size cap 0.02 → 0.028, max width 0.88 → 1.25 |
   | Bottom control hint (Click / arrows …) | size cap 0.017 → 0.024 |
 
+- The new Party Actions tile "Battle plan" (needs the separate Fight With Me mod): its subtitle and footer description
+  are translated; the tile name stays English like the other tile names.
 - Not translated: wheel mode/tile names, HUD, notifications, companion-control window, formation editor,
   logs, dialogue (embedded in code or not safely replaceable). Mode names (Natural/Lead/…) stay English.
 
@@ -51,8 +54,8 @@ constructor; `fmt` string_view length immediates are patched; `movss/mulss` cons
 Only NUL-terminated or length-patched consumers are touched.
 
 ## Reproduce (Python 3.11+, `pip install pefile capstone fonttools`)
-Run from the repository root. Put the **original** 0.2.5 DLL at `wwm/SKSE/Plugins/Wayfarer.dll`
-(SHA-256 `46cde5e6dc3df778c356e8de493ec6c22720444e8f16ee79516a6d12dcaca15a`).
+Run from the repository root. Put the **original** 0.3.0 DLL at `wwm/SKSE/Plugins/Wayfarer.dll`
+(SHA-256 `a0e90379aa6a5ef952a7cf129f53ff92652758b430bb1a4cd438f9246a97b5b4`).
 
 ```
 mkdir -p out
@@ -60,7 +63,7 @@ python3 -I tools/build_patch.py wwm/SKSE/Plugins/Wayfarer.dll out/Wayfarer.dll
 python3 -I tools/verify.py
 ```
 
-Expected output SHA-256: `a0463f07879c888d48be3e93f6ddfc4cb7cfe5be4695900dc47c84903d1e9ac9`
+Expected output SHA-256: `69b2671376b2c7bb4d44b7fb00e11b8c9cf9b407b2d89cbe144e3bedc487da84`
 
 Font (needs `NotoSansJP-Medium.ttf` and the original Cinzel Decorative TTF, both SIL OFL 1.1):
 
@@ -72,7 +75,11 @@ python3 -I tools/build_font.py NotoSansJP-Medium.ttf <Cinzel ttf> font/
 - The patched `Wayfarer.dll` is a modified version of Walk With Me's DLL, which is **GPL-3.0-or-later with
   additional exceptions** (see [`LICENSE`](LICENSE), [`EXCEPTIONS.md`](EXCEPTIONS.md), [`LICENSING.md`](LICENSING.md)).
   The scripts and the translation table in this repository are provided under the same terms.
-  The original program source is the author's `Walk-With-Me-0.2.5-Source.zip` on the mod's Files tab.
+  The original program source is the author's repository, tag `v0.3.0` (commit `dae2c415a8f6d98b1b1c31c23e454ebf38471cdc`):
+  <https://github.com/fatalCMD/walk-with-me/tree/v0.3.0> (the author also mentions a `Walk-With-Me-0.3.0-Source.zip`, which was not
+  found on the Nexus Files tab on 2026-10-11).
 - Fonts: SIL OFL 1.1 (Noto Sans JP, Cinzel Decorative), full texts in [`licenses/`](licenses/).
 - Many thanks to **hashhbbrown** for Walk With Me.
 - The Japanese translations were produced with AI assistance (Claude, Anthropic) and checked in game.
+  (The three strings added for 0.3.0 — the Battle plan tile subtitle, its status text and its footer description — have
+  only been verified statically so far, not yet in game.)
