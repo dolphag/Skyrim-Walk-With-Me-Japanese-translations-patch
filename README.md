@@ -8,13 +8,13 @@ translation patch for [Walk With Me](https://www.nexusmods.com/skyrimspecialedit
 works by modifying the DLL directly.
 
 > **Status:** released on Nexus Mods. This repository contains **no DLL and no font files**: you need your own copy of the original DLL.
-> The companion mod Fight With Me has its own patch tools in [`fwm/`](fwm/).
+> The companion mod Fight With Me has its own repository: <https://github.com/dolphag/Skyrim-Fight-With-Me-Japanese-translations-patch>.
 
 | Patch | For mod version | Source (tag) | Original DLL SHA-256 → patched DLL SHA-256 |
 |---|---|---|---|
 | Walk With Me patch **0.3.0** | Walk With Me 0.3.0 | repository root, tag [`wwm-0.3.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.0) | `a0e90379…97b5b4` → `4541381d…969a` |
 | Walk With Me patch **0.2.5** | Walk With Me 0.2.5 | [`wwm-0.2.5/`](wwm-0.2.5/), tag [`wwm-0.2.5`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.2.5/wwm-0.2.5) | `46cde5e6…caca15a` → `a0463f07…1e9ac9` |
-| Fight With Me patch **0.1.0** | Fight With Me 0.1.0 | [`fwm/`](fwm/), tag [`fwm-0.1.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/fwm-0.1.0/fwm) | `23b99b6b…35bc32d` → `059d0785…aae47` |
+| Fight With Me patch **0.1.0** | Fight With Me 0.1.0 | this repository's tag [`fwm-0.1.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/fwm-0.1.0/fwm) | `23b99b6b…35bc32d` → `059d0785…aae47` |
 
 The Nexus packages `0.3.0-1`, `0.2.5-1` and `0.1.0-1` differ from the versions above only in packaging (no FOMOD, ASCII-only file names, one `LICENSES/` folder); the DLLs are byte-identical, so the tags above still apply.
 
@@ -36,7 +36,7 @@ The text below describes the **0.3.0** tools in the repository root. The 0.2.5 s
   | Bottom control hint (Click / arrows …) | size cap 0.017 → 0.024 |
 
 - The new Party Actions tile "Battle plan" (needs the separate Fight With Me mod): its subtitle and footer description
-  are translated (the Fight With Me screens themselves are patched separately, see [`fwm/`](fwm/)); the tile name stays English like the other tile names.
+  are translated (the Fight With Me screens themselves are patched separately, see the Fight With Me repository); the tile name stays English like the other tile names.
 - Not translated: wheel mode/tile names, HUD, notifications, companion-control window, formation editor,
   logs, dialogue (embedded in code or not safely replaceable). Mode names (Natural/Lead/…) stay English.
 
