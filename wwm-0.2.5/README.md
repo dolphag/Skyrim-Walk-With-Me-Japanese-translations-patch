@@ -73,7 +73,8 @@ python3 -I tools/build_font.py NotoSansJP-Medium.ttf <Cinzel ttf> font/
 - The patched `Wayfarer.dll` is a modified version of Walk With Me's DLL, which is **GPL-3.0-or-later with
   additional exceptions** (see [`LICENSE`](../LICENSE), [`EXCEPTIONS.md`](../EXCEPTIONS.md), [`LICENSING.md`](../LICENSING.md)).
   The scripts and the translation table in this repository are provided under the same terms.
-  The original program source is the author's `Walk-With-Me-0.2.5-Source.zip` on the mod's Files tab.
+  The original program source is the author's repository, tag `v0.2.5` (commit `0c449c60d4a724995a70538863604ab739a44680`):
+  <https://github.com/fatalCMD/walk-with-me/tree/v0.2.5> (the author's `Walk-With-Me-0.2.5-Source.zip` on the mod's Files tab is the other source).
 - Fonts: SIL OFL 1.1 (Noto Sans JP, Cinzel Decorative), full texts in [`licenses/`](../licenses/).
 - Many thanks to **hashhbbrown** for Walk With Me.
 - The Japanese translations were produced with AI assistance (Claude, Anthropic) and checked in game.
