@@ -7,10 +7,16 @@ translation patch for [Walk With Me](https://www.nexusmods.com/skyrimspecialedit
 (Skyrim SE/AE mod by hashhbbrown). The mod keeps its UI strings inside `Wayfarer.dll`, so the patch
 works by modifying the DLL directly.
 
-> **Status:** for Walk With Me **0.3.0 only** (addresses are fixed). It is not released yet.
-> The 0.2.5 version of these scripts is in the first commit of this repository.
-> This repository contains **no DLL and no font files**: you need your own copy of the original 0.3.0 DLL.
+> **Status:** released on Nexus Mods. This repository contains **no DLL and no font files**: you need your own copy of the original DLL.
 > The companion mod Fight With Me has its own patch tools in [`fwm/`](fwm/).
+
+| Patch | For mod version | Source (tag) | Original DLL SHA-256 → patched DLL SHA-256 |
+|---|---|---|---|
+| Walk With Me patch **0.3.0** | Walk With Me 0.3.0 | repository root, tag [`wwm-0.3.0`](https://github.com/dolphag/skyrim-walk-with-me-japanese-translations-patch/tree/wwm-0.3.0) | `a0e90379…97b5b4` → `4541381d…969a` |
+| Walk With Me patch **0.2.5** | Walk With Me 0.2.5 | [`wwm-0.2.5/`](wwm-0.2.5/), tag [`wwm-0.2.5`](https://github.com/dolphag/skyrim-walk-with-me-japanese-translations-patch/tree/wwm-0.2.5/wwm-0.2.5) | `46cde5e6…caca15a` → `a0463f07…1e9ac9` |
+| Fight With Me patch **0.1.0** | Fight With Me 0.1.0 | [`fwm/`](fwm/), tag [`fwm-0.1.0`](https://github.com/dolphag/skyrim-walk-with-me-japanese-translations-patch/tree/fwm-0.1.0/fwm) | `23b99b6b…35bc32d` → `059d0785…aae47` |
+
+The text below describes the **0.3.0** tools in the repository root. The 0.2.5 snapshot lives in [`wwm-0.2.5/`](wwm-0.2.5/) (run its commands from that folder).
 
 ## What the patch does
 - Translates the settings pages (Party / Travel / Rest / Roles / Interface / Controls), the order

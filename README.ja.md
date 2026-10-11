@@ -6,10 +6,16 @@
 日本語化パッチ「Walk With Me - Japanese Translations Patch」のソース、翻訳対応表、ビルドスクリプトです。
 文字列が `Wayfarer.dll` 内にあるため、DLLを直接パッチする方式です。
 
-> **状態**: Walk With Me **0.3.0 専用**(アドレス固定)。未公開です。
-> 0.2.5 版のスクリプトは、このリポジトリの最初のコミットにあります。
-> このリポジトリには **DLLもフォントも含みません**。元の 0.3.0 のDLLは各自で用意してください。
+> **状態**: Nexus Mods で公開済み。このリポジトリには **DLLもフォントも含みません**。元のDLLは各自で用意してください。
 > 姉妹MOD Fight With Me の日本語化ツールは [`fwm/`](fwm/) にあります。
+
+| パッチ | 対象MODの版 | ソース(タグ) | 元DLL SHA-256 → パッチ後DLL SHA-256 |
+|---|---|---|---|
+| Walk With Me パッチ **0.3.0** | Walk With Me 0.3.0 | リポジトリ直下、タグ [`wwm-0.3.0`](https://github.com/dolphag/skyrim-walk-with-me-japanese-translations-patch/tree/wwm-0.3.0) | `a0e90379…97b5b4` → `4541381d…969a` |
+| Walk With Me パッチ **0.2.5** | Walk With Me 0.2.5 | [`wwm-0.2.5/`](wwm-0.2.5/)、タグ [`wwm-0.2.5`](https://github.com/dolphag/skyrim-walk-with-me-japanese-translations-patch/tree/wwm-0.2.5/wwm-0.2.5) | `46cde5e6…caca15a` → `a0463f07…1e9ac9` |
+| Fight With Me パッチ **0.1.0** | Fight With Me 0.1.0 | [`fwm/`](fwm/)、タグ [`fwm-0.1.0`](https://github.com/dolphag/skyrim-walk-with-me-japanese-translations-patch/tree/fwm-0.1.0/fwm) | `23b99b6b…35bc32d` → `059d0785…aae47` |
+
+以下の説明は、リポジトリ直下の **0.3.0** 用ツールについてです。0.2.5 は [`wwm-0.2.5/`](wwm-0.2.5/) にあります(コマンドはそのフォルダで実行)。
 
 ## 内容
 - 設定ページ、命令の説明、命令ホイール/Party Actions の説明文を日本語化(312組、[`translations_en_ja.csv`](translations_en_ja.csv))。
