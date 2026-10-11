@@ -385,7 +385,7 @@ WHEEL_LEA = [
  (0xc8afc, "Make yourselves at home",      "くつろいでいてくれ"),
  (0xc8b0a, "Return to follower AI",        "従者AIに戻す"),
  (0xc8b18, "Walk as I drew it",            "描いた隊列で歩いてくれ"),
- (0xc8d69, "Draw one in Travel settings",  "Travel設定で描いてくれ"),
+ (0xc8d69, "Draw one in Travel settings",  "先にTravel設定で隊列を描いてくれ"),
 ]
 
 # ---- Party Actions(ホイール) ----
