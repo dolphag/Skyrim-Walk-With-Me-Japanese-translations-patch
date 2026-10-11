@@ -16,6 +16,8 @@ works by modifying the DLL directly.
 | Walk With Me patch **0.2.5** | Walk With Me 0.2.5 | [`wwm-0.2.5/`](wwm-0.2.5/), tag [`wwm-0.2.5`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.2.5/wwm-0.2.5) | `46cde5e6…caca15a` → `a0463f07…1e9ac9` |
 | Fight With Me patch **0.1.0** | Fight With Me 0.1.0 | [`fwm/`](fwm/), tag [`fwm-0.1.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/fwm-0.1.0/fwm) | `23b99b6b…35bc32d` → `059d0785…aae47` |
 
+The Nexus packages `0.3.0-1`, `0.2.5-1` and `0.1.0-1` differ from the versions above only in packaging (no FOMOD, ASCII-only file names, one `LICENSES/` folder); the DLLs are byte-identical, so the tags above still apply.
+
 The text below describes the **0.3.0** tools in the repository root. The 0.2.5 snapshot lives in [`wwm-0.2.5/`](wwm-0.2.5/) (run its commands from that folder).
 
 ## What the patch does

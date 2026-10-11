@@ -15,6 +15,8 @@
 | Walk With Me パッチ **0.2.5** | Walk With Me 0.2.5 | [`wwm-0.2.5/`](wwm-0.2.5/)、タグ [`wwm-0.2.5`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.2.5/wwm-0.2.5) | `46cde5e6…caca15a` → `a0463f07…1e9ac9` |
 | Fight With Me パッチ **0.1.0** | Fight With Me 0.1.0 | [`fwm/`](fwm/)、タグ [`fwm-0.1.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/fwm-0.1.0/fwm) | `23b99b6b…35bc32d` → `059d0785…aae47` |
 
+Nexusの配布物 `0.3.0-1`・`0.2.5-1`・`0.1.0-1` は、上の各版と梱包だけが違います(FOMOD廃止、ASCIIのみのファイル名、`LICENSES/` を1つに統合)。DLLは同一なので、上のタグがそのまま対応します。
+
 以下の説明は、リポジトリ直下の **0.3.0** 用ツールについてです。0.2.5 は [`wwm-0.2.5/`](wwm-0.2.5/) にあります(コマンドはそのフォルダで実行)。
 
 ## 内容
