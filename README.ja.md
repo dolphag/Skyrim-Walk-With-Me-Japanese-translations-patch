@@ -9,12 +9,13 @@
 > **状態**: Walk With Me **0.3.0 専用**(アドレス固定)。未公開です。
 > 0.2.5 版のスクリプトは、このリポジトリの最初のコミットにあります。
 > このリポジトリには **DLLもフォントも含みません**。元の 0.3.0 のDLLは各自で用意してください。
+> 姉妹MOD Fight With Me の日本語化ツールは [`fwm/`](fwm/) にあります。
 
 ## 内容
 - 設定ページ、命令の説明、命令ホイール/Party Actions の説明文を日本語化(312組、[`translations_en_ja.csv`](translations_en_ja.csv))。
 - `SKSE/Plugins/Fonts/WalkWithMeInscription.ttf` を合成フォントに差し替え(英数字は元の Cinzel Decorative、
   かなと訳文に使う漢字は Noto Sans JP のサブセット)。予約名「Cinzel」を避けるため内部名を変更しています。
-- Party Actions の新タイル「Battle plan」(別MOD Fight With Me が必要)は、副題と下部の説明を日本語化(タイル名は他のタイルと同様に英語のまま)。
+- Party Actions の新タイル「Battle plan」(別MOD Fight With Me が必要)は、副題と下部の説明を日本語化(タイル名は他のタイルと同様に英語のまま)。Fight With Me 側の画面は別パッチです([`fwm/`](fwm/))。
 - 日本語だと小さく見えたホイール内の文字を拡大(いずれもDLL内の定数):
 
   | 文字 | 変更 |
@@ -30,7 +31,7 @@
 ## 再現手順
 英語版 README の "Reproduce" を参照してください。元DLLの SHA-256 は
 `a0e90379aa6a5ef952a7cf129f53ff92652758b430bb1a4cd438f9246a97b5b4`、出力DLLは
-`69b2671376b2c7bb4d44b7fb00e11b8c9cf9b407b2d89cbe144e3bedc487da84` になります。
+`4541381daed0533aa4a6ac088bfbce75de8072a8ac61b143487167a59cfa969a` になります。
 
 ## ライセンス・謝辞
 - パッチ後の `Wayfarer.dll` は、GPL-3.0-or-later(追加の例外つき)の原作DLLの改変版です。スクリプトと対応表も同条件で
@@ -41,5 +42,3 @@
 - フォントは SIL OFL 1.1([`licenses/`](licenses/))。
 - 原作者 hashhbbrown さんに感謝します。
 - 訳文はAI(Claude, Anthropic)の支援で作成し、ゲーム内で動作確認しています。
-  (0.3.0 で追加した3文 — Battle plan タイルの副題・状態表示・下部の説明 — は、現時点では静的な検証のみで、
-  ゲーム内では未確認です。)

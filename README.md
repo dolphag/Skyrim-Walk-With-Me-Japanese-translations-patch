@@ -10,6 +10,7 @@ works by modifying the DLL directly.
 > **Status:** for Walk With Me **0.3.0 only** (addresses are fixed). It is not released yet.
 > The 0.2.5 version of these scripts is in the first commit of this repository.
 > This repository contains **no DLL and no font files**: you need your own copy of the original 0.3.0 DLL.
+> The companion mod Fight With Me has its own patch tools in [`fwm/`](fwm/).
 
 ## What the patch does
 - Translates the settings pages (Party / Travel / Rest / Roles / Interface / Controls), the order
@@ -27,7 +28,7 @@ works by modifying the DLL directly.
   | Bottom control hint (Click / arrows …) | size cap 0.017 → 0.024 |
 
 - The new Party Actions tile "Battle plan" (needs the separate Fight With Me mod): its subtitle and footer description
-  are translated; the tile name stays English like the other tile names.
+  are translated (the Fight With Me screens themselves are patched separately, see [`fwm/`](fwm/)); the tile name stays English like the other tile names.
 - Not translated: wheel mode/tile names, HUD, notifications, companion-control window, formation editor,
   logs, dialogue (embedded in code or not safely replaceable). Mode names (Natural/Lead/…) stay English.
 
@@ -63,7 +64,7 @@ python3 -I tools/build_patch.py wwm/SKSE/Plugins/Wayfarer.dll out/Wayfarer.dll
 python3 -I tools/verify.py
 ```
 
-Expected output SHA-256: `69b2671376b2c7bb4d44b7fb00e11b8c9cf9b407b2d89cbe144e3bedc487da84`
+Expected output SHA-256: `4541381daed0533aa4a6ac088bfbce75de8072a8ac61b143487167a59cfa969a`
 
 Font (needs `NotoSansJP-Medium.ttf` and the original Cinzel Decorative TTF, both SIL OFL 1.1):
 
@@ -81,5 +82,3 @@ python3 -I tools/build_font.py NotoSansJP-Medium.ttf <Cinzel ttf> font/
 - Fonts: SIL OFL 1.1 (Noto Sans JP, Cinzel Decorative), full texts in [`licenses/`](licenses/).
 - Many thanks to **hashhbbrown** for Walk With Me.
 - The Japanese translations were produced with AI assistance (Claude, Anthropic) and checked in game.
-  (The three strings added for 0.3.0 — the Battle plan tile subtitle, its status text and its footer description — have
-  only been verified statically so far, not yet in game.)
