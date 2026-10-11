@@ -366,11 +366,11 @@ EMBLEMS = {"Band":"一団","Banner":"旗印","Crown":"王冠","Castle":"城","Sw
 
 # 命令(Order)の説明文: .rdata のポインタ表スロット。モード名(Natural等)は英語のまま。
 DESC_SLOTS = [
- (0x213d08,"Find your own space as we travel","移動中は、それぞれ好きな位置を歩いてくれ"),
- (0x213d10,"Take the lead along our route","道中は先頭を歩いて、案内してくれ"),
- (0x213d18,"Travel at my side","私の隣を歩いてくれ"),
- (0x213d20,"Keep to the rear","後ろを歩いてくれ"),
- (0x213d28,"Stay here and make yourselves at home","ここでくつろいでいてくれ"),
+ (0x213d08,"Find your own space as we travel","移動中はそれぞれ好きな位置を歩いて"),
+ (0x213d10,"Take the lead along our route","道中は先頭を歩いて案内して"),
+ (0x213d18,"Travel at my side","私の隣を歩いて"),
+ (0x213d20,"Keep to the rear","後ろを歩いて"),
+ (0x213d28,"Stay here and make yourselves at home","ここでくつろいでいて"),
  (0x213d30,"Return travel and rest to Skyrim or your follower framework","移動と休憩を、Skyrim本来の動作または従者フレームワークに戻す"),
  (0x213d38,"Travel in the formation you drew in Travel settings","Travel設定で描いた隊列で移動する"),
 ]
@@ -378,14 +378,14 @@ DESC_SLOTS = [
 # ホイール(WalkWithMeOrders)の命令説明: 関数 0xc6350 内の lea reg,[rip+disp32] を直接付け替える。
 # (addr, 原文, 訳)  ポインタのみ・NUL終端文字列(ImDrawList_AddText)なので長さ固定の問題は無い。
 WHEEL_LEA = [
- (0xc8ac4, "Find your own pace",           "好きなペースで進んでくれ"),
- (0xc8ad2, "Take the road ahead",          "前を歩いて案内してくれ"),
- (0xc8ae0, "Stay by my side",              "私のそばにいてくれ"),
- (0xc8aee, "Watch our backs",              "背後を見張ってくれ"),
- (0xc8afc, "Make yourselves at home",      "くつろいでいてくれ"),
+ (0xc8ac4, "Find your own pace",           "好きなペースで進んで"),
+ (0xc8ad2, "Take the road ahead",          "前を歩いて案内して"),
+ (0xc8ae0, "Stay by my side",              "私のそばにいて"),
+ (0xc8aee, "Watch our backs",              "背後を見張って"),
+ (0xc8afc, "Make yourselves at home",      "くつろいでいて"),
  (0xc8b0a, "Return to follower AI",        "従者AIに戻す"),
- (0xc8b18, "Walk as I drew it",            "描いた隊列で歩いてくれ"),
- (0xc8d69, "Draw one in Travel settings",  "先にTravel設定で隊列を描いてくれ"),
+ (0xc8b18, "Walk as I drew it",            "描いた隊列で歩いて"),
+ (0xc8d69, "Draw one in Travel settings",  "先にTravel設定で隊列を描いて"),
 ]
 
 # ---- Party Actions(ホイール) ----
