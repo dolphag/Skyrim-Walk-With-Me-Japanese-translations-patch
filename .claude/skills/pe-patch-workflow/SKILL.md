@@ -18,7 +18,10 @@ description: Wayfarer.dll(Walk With Me)の日本語化パッチを作る・直�
 4. 期待する出力 SHA-256(0.3.0): `4541381daed0533aa4a6ac088bfbce75de8072a8ac61b143487167a59cfa969a`。訳文を変えたら変わるので、README の値も更新する。
 5. 翻訳表: `translations_en_ja.csv`(UTF-8 BOM、ヘッダ行あり)を更新する。
 6. フォント: `python3 -I tools/build_font.py NotoSansJP-Medium.ttf <Cinzel ttf> font/`(OFL。Cinzel のファミリー名は変更する)。訳文に使う漢字が増えたら再ビルド。
-7. テスト版をユーザーに渡す(経路は CLAUDE.md の「最初のセッションで確認すること」)。ユーザーのスクリーンショットと所見で直す。
+7. テスト版 zip を作ってユーザーに渡す(経路は CLAUDE.md の「最初のセッションで確認すること」)。
+   - メモを `release/TEST_MEMO_TEMPLATE.txt` の形で書く(前回からの変更、確認してほしい点、補足)。
+   - `python3 -I tools/make_zip.py test out/Wayfarer.dll <N> --memo <メモ> [--font font/WalkWithMeInscription.ttf]` → `out/WWM_test<N>.zip`。
+   - ユーザーのスクリーンショットと所見で直す。
 
 ## 拡大定数
 - 日本語は英字より小さく見えるため、ホイール中央の説明、Party Actions のフッター、下部の操作ヒントは、サイズ上限と最大幅の定数を書き換えている(値は README の表)。追加するときは、どの呼び出しアドレスの定数かを特定してから書き換える。全体の倍率は変えない。

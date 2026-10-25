@@ -11,7 +11,9 @@ description: WWM 日本語化パッチのリリース準備(配布 zip、README�
 1. 実機確認が済んでいること(ユーザーの「OK」)。
 2. **原 MOD の Nexus ページの権限をその時点で確認**(Permissions and credits)。確認日を README に書く。変更があれば止めてユーザーに報告。
 3. 版番号を決める: 原 MOD に連動(WWM 0.3.0-N)。**Nexus の版と zip 内 README の版を一致させる**。
-4. README(日本語は `README.ja.md`、英語は `README.md`)、翻訳表 CSV、元 DLL / 出力 DLL の SHA-256 を更新する。
+4. リポジトリの README(日本語は `README.ja.md`、英語は `README.md`)、翻訳表 CSV、元 DLL / 出力 DLL の SHA-256 を更新する。
+   配布 zip 内の README(日本語・英語)も、**更新履歴(Changelog。最新を先頭に追記)**、変更点、確認日、版を直す。
+   **雛形はまだリポジトリにない**: 公開済みの配布 zip(0.3.0-1)に入っている README を、ユーザーに添付してもらい、`release/` に雛形として保存する(ハッシュは `{ORIG_SHA}` / `{OUT_SHA}` に置き換える)。保存したら `tools/make_zip.py` に `release` モードを追加する(FWM リポジトリの `tools/make_zip.py` が実装例。README の 1 行目に版がなければ失敗する検査を入れる)。
 5. zip を作る(構成は下記)。
 6. Nexus 用テキスト(更新履歴・説明・クレジット欄)を作る。
 7. **main へ統合 → main の HEAD を確認 → ユーザーがそのコミットにタグ**(`wwm-<版>` の形式)。タグは GitHub の Release で、ユーザーが付ける。

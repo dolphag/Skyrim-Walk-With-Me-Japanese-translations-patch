@@ -36,7 +36,7 @@ Fight With Me / Paths のパッチは**別リポジトリ**(<https://github.com/
 - 利用者は FWM / Paths と WWM の関係を意識していない前提で説明を書く。特定の外部作品(MTG 等)を強調しない。
 
 ## 作業の進め方
-- 手順の詳細は skill `pe-patch-workflow`(ビルド・検証)、`release-package`(リリース)。
+- 手順の詳細は skill `pe-patch-workflow`(ビルド・検証・テスト版 zip)、`release-package`(README・Changelog・配布 zip・Nexus 文面・タグ)。テスト版 zip は `tools/make_zip.py`、メモの雛形は `release/`。配布用 zip の雛形と作成スクリプトは未整備(release-package に手順あり)。
 - **実機(ゲーム内)確認なしにリリースしない**。テスト版は `out/` に作り(git 管理外)、ユーザーのスクリーンショットと所見で直す。
 - 逆アセンブル・アドレス調査の結果は必ずファイルに残す(`docs/` またはコード内コメント)。会話には残らない前提で作業する。
 - 大きいファイルは全文を読まず、必要な範囲だけ読む。
