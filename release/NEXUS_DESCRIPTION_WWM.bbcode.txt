@@ -1,0 +1,95 @@
+[url=https://www.nexusmods.com/skyrimspecialedition/mods/191283]Walk With Me[/url] を日本語化するパッチです。文字列がDLL内にあるため、DLLを上書きする形式です。
+
+[b]必須[/b]
+[list]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/191283]Walk With Me[/url] 本体[/*]
+[*]SKSE Menu Framework 3 で日本語を表示するための日本語フォント設定。
+日本語環境を導入済みなら追加の設定は不要です。私は [url=https://skyrimspecialedition.2game.info/detail.php?id=120352]2game 様の日本語化ファイル[/url]で動作を確認しています。[/*]
+[/list]
+
+[b]推奨[/b]
+[list]
+[*]姉妹MODの日本語化パッチ: [url=https://www.nexusmods.com/skyrimspecialedition/mods/194874]Fight With Me - Japanese Translations Patch[/url][/*]
+[/list]
+
+[b]バージョンについて[/b]
+本体と本パッチのバージョンは必ずあわせてください。バージョン番号は原則として本体と同じです。
+同じバージョン内でパッチだけを修正したときは、x.x.x-1 のように枝番をつけます。
+本体の旧バージョン用のファイルは、Old files に置いています。
+
+[b]導入[/b]
+本体を入れたうえで、本パッチを本体より下(後勝ち)にして有効化します。INIとセーブには影響せず、無効化すれば元に戻ります。
+[b]本体を更新するときは、先に本パッチを無効化(削除)してください。[/b]古いDLLが新しい本体を上書きして、不具合やクラッシュの原因になります。
+
+[b]日本語になるもの / ならないもの[/b]
+設定ページ、命令の説明文、命令ホイールや Party Actions の説明文が日本語になります。
+ホイールのモード名・タイル名、HUD、通知、各種ウィンドウなどは英語のままです(文字列がコード内に埋め込まれていて安全に差し替えられないため)。
+
+[b]原版からの変更点[/b]
+[list=1]
+[*]DLL内の文字列と、一部の文字サイズの定数を変更しています。[/*]
+[*]フォント(WalkWithMeInscription.ttf)を差し替えています。英字・数字は元のままで、日本語のかな・漢字だけを加えたものです。[/*]
+[*]日本語は小さく見えるため、ホイール内の説明文を大きくしています。[/*]
+[*]訳に使う漢字は、SKSE Menu Framework が読み込む約3000字の範囲内に限っています(範囲外の漢字は「?」になるため)。[/*]
+[/list]
+
+[b]ライセンス・ソース[/b]
+DLLは本体と同じ GPL-3.0-or-later(本体の追加の例外つき)、フォントは SIL OFL 1.1 です。改変日は、各ファイルに同梱の README に記載しています。
+対応するソース・翻訳表・生成スクリプトは [url=https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch]GitHub[/url] のタグ(wwm-バージョン番号)にあります。本体のソースは [url=https://github.com/fatalCMD/walk-with-me]作者のGitHub[/url] のタグ(v バージョン番号)です。
+
+[b]AIの利用[/b]
+訳文と本説明文の作成にAI(Claude)を使用しています。誤訳や表示崩れがあればコメントでお知らせください。
+
+[b]謝辞[/b]
+素晴らしいMODを公開してくださっている原作者 hashhbbrown さんに心から感謝します。
+日本語でも楽しめるようにと、感謝を込めて作った非公式の翻訳です。
+
+――――――――――――――――――――
+[b]English[/b]
+
+An unofficial Japanese translation patch for [url=https://www.nexusmods.com/skyrimspecialedition/mods/191283]Walk With Me[/url].
+The strings live inside the DLL, so the patch replaces it.
+
+[b]Requirements[/b]
+[list]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/191283]Walk With Me[/url][/*]
+[*]A Japanese font set up in SKSE Menu Framework 3.
+No extra setup is needed if you already have a Japanese environment. I tested with the [url=https://skyrimspecialedition.2game.info/detail.php?id=120352]Japanese localization by 2game[/url].[/*]
+[/list]
+
+[b]Recommended[/b]
+[list]
+[*]Sister patch: [url=https://www.nexusmods.com/skyrimspecialedition/mods/194874]Fight With Me - Japanese Translations Patch[/url][/*]
+[/list]
+
+[b]Versions[/b]
+Use the patch version that matches your Walk With Me version. Version numbers follow the original mod.
+If the patch alone is fixed within the same version, a suffix such as x.x.x-1 is added.
+Files for older versions of the original mod are under Old files.
+
+[b]Install[/b]
+Install above the original mod. INI and saves are untouched; disabling the patch restores the original.
+[b]Before updating Walk With Me, disable/remove this patch first[/b], or its old DLL overwrites the new one and can cause errors or crashes.
+
+[b]Translated / not translated[/b]
+Settings pages, order descriptions, and the descriptions on the order wheel and Party Actions are translated.
+Wheel mode/tile names, the HUD, notifications, windows and similar parts stay in English (the strings are embedded in code and cannot be replaced safely).
+
+[b]Changes to the original[/b]
+[list=1]
+[*]Strings and some text-size constants in the DLL are modified.[/*]
+[*]The font (WalkWithMeInscription.ttf) is replaced: Latin letters and digits are unchanged, and only the Japanese kana/kanji are added.[/*]
+[*]Wheel descriptions are enlarged because Japanese looks smaller.[/*]
+[*]Only kanji within the ~3000 that SKSE Menu Framework loads are used (others would show as "?").[/*]
+[/list]
+
+[b]License / source[/b]
+The DLL is GPL-3.0-or-later like the original (with the original's additional exceptions); the font is SIL OFL 1.1. The modification date is stated in the README bundled with each file.
+Corresponding source, translation table and build scripts are in the tags (wwm-VERSION) of [url=https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch]GitHub[/url]. The original source is in the tags (vVERSION) of [url=https://github.com/fatalCMD/walk-with-me]the author's GitHub[/url].
+
+[b]AI disclosure[/b]
+Translations and this description were produced with AI assistance (Claude). Please report mistranslations or layout problems in the comments.
+
+[b]Thanks[/b]
+Huge thanks to hashhbbrown for creating and sharing Walk With Me.
+This is an unofficial translation made with gratitude so Japanese players can enjoy it too.
