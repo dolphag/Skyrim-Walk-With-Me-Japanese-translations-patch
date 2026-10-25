@@ -19,7 +19,7 @@ description: WWM 日本語化パッチのリリース準備(配布 zip、README�
 
 ## zip の構成(0.3.0-1 以降の方針)
 - FOMOD なし、ASCII のファイル名、ライセンス文書は `LICENSES/` 1 フォルダにまとめる。
-- 含めるもの: パッチ済み `Wayfarer.dll`、置き換えフォント(`SKSE/Plugins/Fonts/WalkWithMeInscription.ttf`)、README、`LICENSES/`(GPL、例外、OFL の全文)。
+- 構成は**前回の配布 zip(0.3.0-1)を実物で確認して踏襲する**(この節は要確認)。含まれるもの: パッチ済み `Wayfarer.dll`、置き換えフォント(`SKSE/Plugins/Fonts/WalkWithMeInscription.ttf`)、README(日本語・英語)、ライセンス文書(原作の配布物のものをそのまま + フォントの OFL)。0.3.0 の元の作業 zip には `ThirdParty/` の依存ライブラリのライセンス一式も含まれていた。
 - zip は Python の `zipfile` で作る(パス区切りと改行を揃える)。
 
 ## README / Nexus 文面に必ず入れること
