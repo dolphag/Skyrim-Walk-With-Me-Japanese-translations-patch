@@ -5,9 +5,9 @@ Fight With Me / Paths のパッチは**別リポジトリ**(<https://github.com/
 常時読み込まれるので短く保つ。手順は `.claude/skills/`、版ごとの調査は `docs/` に置く。
 
 ## 最初のセッションで確認すること(未確認の事項)
-- [ ] **テスト版の受け渡し経路**: ビルドしたテスト版をユーザーが手元で受け取れるか。方法がなければ、ここで確定してこの節に書く。DLL・フォントを GitHub に載せる方法は不可。
+- [x] **テスト版の受け渡し経路**(確認済み): `SendUserFile` でユーザーへ直接送る(`display: attach`)。Dropbox / Google Drive 等のクラウド経由は使わない(ユーザーが手元に落とす手間が増えるため)。受け取りは実機で成功を確認済み。DLL・フォントを GitHub に載せる方法は不可。
 - [ ] 元 DLL(`Wayfarer.dll`)は毎回ユーザーが添付する。SHA-256 が `a0e90379…97b5b4`(0.3.0)であることを確認する(`tools/build_patch.py` も検査する)。
-- [ ] フォントのビルドには `NotoSansJP-Medium.ttf` と Cinzel Decorative の原 TTF が必要(どちらも OFL)。ユーザーに添付してもらう。
+- [ ] フォントのビルドには `NotoSansJP-Medium.ttf` と Cinzel Decorative の TTF が必要(どちらも OFL)。ユーザーに添付してもらう。Cinzel 側は、原 MOD 同梱の `SKSE/Plugins/Fonts/WalkWithMeInscription.ttf`(Cinzel Decorative Bold, 353 グリフ)を使える(0.3.0 で動作確認済み。`build_font.py` が字形・メトリクスの一致を検査する)。
 
 ## 応答のしかた
 - 日本語。率直・技術的に正確に。褒めない・慰めない。誤りは、どの前提が誤りだったかを示して認める。
