@@ -5,6 +5,12 @@ from capstone import Cs, CS_ARCH_X86, CS_MODE_64
 from capstone.x86 import X86_OP_MEM, X86_REG_RIP
 
 SRC, OUT = sys.argv[1], sys.argv[2]
+# 元DLLの SHA-256 が違えば作らない(アドレス固定のパッチなので、別版への誤適用を防ぐ)
+import hashlib
+ORIG_SHA256 = 'a0e90379aa6a5ef952a7cf129f53ff92652758b430bb1a4cd438f9246a97b5b4'   # Wayfarer.dll (Walk With Me 0.3.0)
+_sha = hashlib.sha256(open(SRC, 'rb').read()).hexdigest()
+if _sha != ORIG_SHA256:
+    raise SystemExit('元DLLの SHA-256 が想定と違います(Walk With Me 0.3.0 用): %s' % _sha)
 spec = importlib.util.spec_from_file_location('trans', 'tools/trans_ja.py')
 tr = importlib.util.module_from_spec(spec); spec.loader.exec_module(tr)
 
