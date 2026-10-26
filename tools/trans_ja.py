@@ -420,7 +420,7 @@ HINT_SLOTS = [
  (0x21a618, "Switch party guidance on or off. Off hands everyone back to their own AI.",
             "パーティの案内をオン/オフに切り替える。オフにすると全員が各自のAIに戻る。"),
  (0x21a620, "Walk hand in hand in Companion style with your partner, or the nearest companion.",
-            "Companionモードで、選んだ相手、または最も近い従者と手をつないで歩く。"),
+            "Companionモードで選んだ相手、または最も近い従者と手をつないで歩く。"),
  (0x21a628, "Your finder points out chests, bodies and valuables worth a look.",
             "探索役が、宝箱や死体、調べる価値のある品を教えてくれる。"),
  (0x21a630, "Your pathfinder points out places you have never found, in Natural, Lead and Companion.",
