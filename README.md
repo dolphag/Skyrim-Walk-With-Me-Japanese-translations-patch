@@ -12,7 +12,7 @@ works by modifying the DLL directly.
 
 | Patch | For mod version | Source (tag) | Original DLL SHA-256 → patched DLL SHA-256 |
 |---|---|---|---|
-| Walk With Me patch **0.3.1** | Walk With Me 0.3.1 | repository root, tag [`wwm-0.3.1`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.1) | `8b8d398a…3c40` → `1f583eda…7634` |
+| Walk With Me patch **0.3.1** | Walk With Me 0.3.1 | repository root, tag [`wwm-0.3.1`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.1) | `8b8d398a…3c40` → `44487bc2…bfd9` |
 | Walk With Me patch **0.3.0** | Walk With Me 0.3.0 | repository root, tag [`wwm-0.3.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.0) | `a0e90379…97b5b4` → `4541381d…969a` |
 | Walk With Me patch **0.2.5** | Walk With Me 0.2.5 | [`wwm-0.2.5/`](wwm-0.2.5/), tag [`wwm-0.2.5`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.2.5/wwm-0.2.5) | `46cde5e6…caca15a` → `a0463f07…1e9ac9` |
 | Fight With Me patch **0.1.0** | Fight With Me 0.1.0 | this repository's tag [`fwm-0.1.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/fwm-0.1.0/fwm) | `23b99b6b…35bc32d` → `059d0785…aae47` |
@@ -73,7 +73,7 @@ python3 -I tools/build_patch.py wwm/SKSE/Plugins/Wayfarer.dll out/Wayfarer.dll
 python3 -I tools/verify.py
 ```
 
-Expected output SHA-256: `1f583edadfdc2e34df1ac822ed5cfa24c06dc5867cbb55db2f4ae56ba0b57634`
+Expected output SHA-256: `44487bc2398c6d21996e548256445bfcc9a9fa60d8b6a46ff32361c1e8a1bfd9`
 
 Font (needs `NotoSansJP-Medium.ttf` and the original Cinzel Decorative TTF, both SIL OFL 1.1):
 

@@ -437,7 +437,7 @@ INLINE = [
  (0xc8592, 0xc85d2, 0x860, "Any companion",      "どの従者でも"),
  (0xc86fe, 0xc8737, 0x860, "Not in this style",  "この命令では不可"),
  (0xc8769, 0xc87a9, 0x880, "Curious first",      "好奇心旺盛な従者が先"),
- (0xc83ce, 0xc8401, 0x860, "In Companion",      "Companionで有効"),
+ (0xc83ce, 0xc8401, 0x860, "In Companion",      "Companion時のみ"),
  (0xc823a, 0xc826d, 0x880, "your partner",      "指定の相手"),
 ]
 # (d) fmt 書式(ポインタ+長さ): (lea addr, 長さ即値addr+7, 原文, 訳)  ※第2引数("s")は未使用になる

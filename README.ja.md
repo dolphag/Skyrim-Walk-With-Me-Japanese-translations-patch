@@ -11,7 +11,7 @@
 
 | パッチ | 対象MODの版 | ソース(タグ) | 元DLL SHA-256 → パッチ後DLL SHA-256 |
 |---|---|---|---|
-| Walk With Me パッチ **0.3.1** | Walk With Me 0.3.1 | リポジトリ直下、タグ [`wwm-0.3.1`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.1) | `8b8d398a…3c40` → `1f583eda…7634` |
+| Walk With Me パッチ **0.3.1** | Walk With Me 0.3.1 | リポジトリ直下、タグ [`wwm-0.3.1`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.1) | `8b8d398a…3c40` → `44487bc2…bfd9` |
 | Walk With Me パッチ **0.3.0** | Walk With Me 0.3.0 | リポジトリ直下、タグ [`wwm-0.3.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.0) | `a0e90379…97b5b4` → `4541381d…969a` |
 | Walk With Me パッチ **0.2.5** | Walk With Me 0.2.5 | [`wwm-0.2.5/`](wwm-0.2.5/)、タグ [`wwm-0.2.5`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.2.5/wwm-0.2.5) | `46cde5e6…caca15a` → `a0463f07…1e9ac9` |
 | Fight With Me パッチ **0.1.0** | Fight With Me 0.1.0 | このリポジトリのタグ [`fwm-0.1.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/fwm-0.1.0/fwm) | `23b99b6b…35bc32d` → `059d0785…aae47` |
@@ -40,7 +40,7 @@ Nexusの配布物 `0.3.0-1`・`0.2.5-1`・`0.1.0-1` は、上の各版と梱包�
 ## 再現手順
 英語版 README の "Reproduce" を参照してください。元DLLの SHA-256 は
 `8b8d398a146415d17bb659003121871a41566e109ca78c461ea3854e6cff3c40`、出力DLLは
-`1f583edadfdc2e34df1ac822ed5cfa24c06dc5867cbb55db2f4ae56ba0b57634` になります。
+`44487bc2398c6d21996e548256445bfcc9a9fa60d8b6a46ff32361c1e8a1bfd9` になります。
 
 ## ライセンス・謝辞
 - パッチ後の `Wayfarer.dll` は、GPL-3.0-or-later(追加の例外つき)の原作DLLの改変版です。スクリプトと対応表も同条件で
