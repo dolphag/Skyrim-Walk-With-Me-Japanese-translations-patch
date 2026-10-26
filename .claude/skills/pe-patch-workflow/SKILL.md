@@ -5,17 +5,17 @@ description: Wayfarer.dll(Walk With Me)の日本語化パッチを作る・直�
 
 # WWM DLL パッチの作業手順
 
-対象: `Wayfarer.dll`(Walk With Me 0.3.0)。静的な PE パッチ。アドレスは版固定。
+対象: `Wayfarer.dll`(Walk With Me 0.3.1。0.3.0 の記録は `docs/` とタグ `wwm-0.3.0`)。静的な PE パッチ。アドレスは版固定。
 
 ## 前提
-- 元 DLL はユーザーが添付し、`wwm/SKSE/Plugins/Wayfarer.dll` に置く(git 管理外)。SHA-256 は `a0e90379aa6a5ef952a7cf129f53ff92652758b430bb1a4cd438f9246a97b5b4`。`tools/build_patch.py` は一致しなければ失敗する。
+- 元 DLL はユーザーが添付し、`wwm/SKSE/Plugins/Wayfarer.dll` に置く(git 管理外)。SHA-256 は `8b8d398a146415d17bb659003121871a41566e109ca78c461ea3854e6cff3c40`(0.3.1)。`tools/build_patch.py` は一致しなければ失敗する。
 - 出力は `out/`(git 管理外)。依存は `pip install -r requirements-dev.txt`。実行はリポジトリのルートから `python3 -I`。
 
 ## 通常の変更(翻訳・表示の調整)
 1. 訳文・パッチ箇所(アドレス)・定数は `tools/trans_ja.py`。文字列の分類は `tools/tier1.py` / `tier1.json`。
 2. 生成: `mkdir -p out && python3 -I tools/build_patch.py wwm/SKSE/Plugins/Wayfarer.dll out/Wayfarer.dll`(`changes.json` も出る)
 3. 検証: `python3 -I tools/verify.py`(変更バイトがすべて記録されているか、参照が新セクション `.jpn` に届くか)
-4. 期待する出力 SHA-256(0.3.0): `4541381daed0533aa4a6ac088bfbce75de8072a8ac61b143487167a59cfa969a`。訳文を変えたら変わるので、README の値も更新する。
+4. 期待する出力 SHA-256(0.3.1 テスト版 1): `4857f0de7d601e02303daa3443b515ec1dd62b98fc0ddb676f49f15eedaf422f`。訳文を変えたら変わるので、README の値も更新する。
 5. 翻訳表: `translations_en_ja.csv`(UTF-8 BOM、ヘッダ行あり)を更新する。
 6. フォント: `python3 -I tools/build_font.py NotoSansJP-Medium.ttf <Cinzel ttf> font/`(OFL。Cinzel のファミリー名は変更する)。訳文に使う漢字が増えたら再ビルド。
 7. テスト版 zip を作ってユーザーに渡す(経路は CLAUDE.md の「最初のセッションで確認すること」)。
@@ -34,6 +34,6 @@ description: Wayfarer.dll(Walk With Me)の日本語化パッチを作る・直�
 
 ## 新しい版へ移行するとき
 1. 新しい元 DLL を受け取り、SHA-256 を記録する。
-2. 旧版のパッチ箇所を、新版の対応アドレスへ移す(`tools/dis.py` / `dis2.py` で確認)。命令列(アドレスをマスク)で探す方法は、FWM リポジトリの `tools/dev/sigfind.py` が使用例。
+2. 旧版のパッチ箇所を、新版の対応アドレスへ移す(旧 DLL が無くても、英語原文と命令の形で探せる。0.3.1 の例は `docs/ADDRESSES-0.3.1.md`、メニュー関数の洗い出しは `tools/tier1.py`)(`tools/dis.py` / `dis2.py` で確認)。命令列(アドレスをマスク)で探す方法は、FWM リポジトリの `tools/dev/sigfind.py` が使用例。
 3. 文字列の増減を洗い出し、翻訳表と `tools/trans_ja.py` を更新する。
 4. 版ごとの調査結果を `docs/ADDRESSES-<版>.md` に残す。前の版のセッションの文脈を引き継がない。

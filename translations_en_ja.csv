@@ -97,6 +97,7 @@ Classic restores the earlier procedural hand holding and needs no generated clas
 Hold hands (experimental),手をつなぐ（実験的）
 Hand-holding companion,手をつなぐ従者
 None,なし
+None - choose one,なし - 選んでください
 This temporary actor has no persistent reference to remember. Choose a placed companion.,この一時的なアクターには記憶できる永続参照がありません。配置済みの従者を選んでください。
 Include this companion on the Party page first.,先にPartyページでこの従者を含めてください。
 "Only this companion is eligible. They approach your side using normal pathfinding. Pause to let them arrive, turn and connect before walking together. After a failed attempt, step away before trying again. Selection saves automatically.",対象はこの従者だけです。通常の経路探索であなたの横に近づきます。一緒に歩き出す前に、立ち止まって相手が到着し、向きを変え、つなぐのを待ってください。失敗したら、いったん離れてからやり直してください。選択は自動で保存されます。
@@ -284,7 +285,7 @@ Hold hands,手つなぎ
 "When you stop, the party settles in nearby. Off: they wait on their feet.",立ち止まると、パーティは近くでくつろぐ。オフの場合は立ったまま待つ。
 Take or return control of the companion you were looking at.,見ていた従者の制御を引き継ぐ、または返す。
 Switch party guidance on or off. Off hands everyone back to their own AI.,パーティの案内をオン/オフに切り替える。オフにすると全員が各自のAIに戻る。
-Walk hand in hand with your chosen partner in Companion mode.,Companionモードで、選んだ相手と手をつないで歩く。
+"Walk hand in hand in Companion style with your partner, or the nearest companion.",Companionモードで、選んだ相手、または最も近い従者と手をつないで歩く。
 "Your finder points out chests, bodies and valuables worth a look.",探索役が、宝箱や死体、調べる価値のある品を教えてくれる。
 "Your pathfinder points out places you have never found, in Natural, Lead and Companion.",Pathfinderが、まだ見つけていない場所を教えてくれる(Natural、Lead、Companion時)。
 Band,一団
@@ -305,7 +306,7 @@ Calm,鎮静
 Tavern,酒場
 Teleport queued,テレポート待機中
 Look at a companion,従者を見る
-Choose a partner,相手を選ぶ
+Nearest companion,最寄りの従者
 Not in this style,この命令では不可
 Curious first,好奇心旺盛な従者が先
 Roles and tactics,役割と戦術

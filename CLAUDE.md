@@ -6,7 +6,7 @@ Fight With Me / Paths のパッチは**別リポジトリ**(<https://github.com/
 
 ## 最初のセッションで確認すること(未確認の事項)
 - [ ] **テスト版の受け渡し経路**: ビルドしたテスト版をユーザーが手元で受け取れるか。方法がなければ、ここで確定してこの節に書く。DLL・フォントを GitHub に載せる方法は不可。
-- [ ] 元 DLL(`Wayfarer.dll`)は毎回ユーザーが添付する。SHA-256 が `a0e90379…97b5b4`(0.3.0)であることを確認する(`tools/build_patch.py` も検査する)。
+- [ ] 元 DLL(`Wayfarer.dll`)は毎回ユーザーが添付する。SHA-256 が `8b8d398a…3c40`(0.3.1。0.3.0 は `a0e90379…97b5b4`)であることを確認する(`tools/build_patch.py` も検査する)。
 - [ ] フォントのビルドには `NotoSansJP-Medium.ttf` と Cinzel Decorative の原 TTF が必要(どちらも OFL)。ユーザーに添付してもらう。
 
 ## 応答のしかた

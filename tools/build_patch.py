@@ -7,10 +7,10 @@ from capstone.x86 import X86_OP_MEM, X86_REG_RIP
 SRC, OUT = sys.argv[1], sys.argv[2]
 # 元DLLの SHA-256 が違えば作らない(アドレス固定のパッチなので、別版への誤適用を防ぐ)
 import hashlib
-ORIG_SHA256 = 'a0e90379aa6a5ef952a7cf129f53ff92652758b430bb1a4cd438f9246a97b5b4'   # Wayfarer.dll (Walk With Me 0.3.0)
+ORIG_SHA256 = '8b8d398a146415d17bb659003121871a41566e109ca78c461ea3854e6cff3c40'   # Wayfarer.dll (Walk With Me 0.3.1)
 _sha = hashlib.sha256(open(SRC, 'rb').read()).hexdigest()
 if _sha != ORIG_SHA256:
-    raise SystemExit('元DLLの SHA-256 が想定と違います(Walk With Me 0.3.0 用): %s' % _sha)
+    raise SystemExit('元DLLの SHA-256 が想定と違います(Walk With Me 0.3.1 用): %s' % _sha)
 spec = importlib.util.spec_from_file_location('trans', 'tools/trans_ja.py')
 tr = importlib.util.module_from_spec(spec); spec.loader.exec_module(tr)
 
@@ -92,6 +92,7 @@ for items, jitems in tr.COMBOS.items():
         for s in u['sites']: patch_lea(s, u['va'], off); n_sites += 1
     combo_done += 1
 # 3) ポインタ表スロット
+EMBLEM_BASE = 0x2150c8   # エンブレム名の表(0.3.0 では 0x214068)
 reloc_rvas = set()
 for blk in pe.DIRECTORY_ENTRY_BASERELOC:
     for e in blk.entries:
@@ -107,7 +108,7 @@ def patch_slot(slot, en, ja):
     changes.append((fo, 8, 'slot@%x' % slot))
 for slot, en, ja in tr.SLOTS + tr.DESC_SLOTS: patch_slot(slot, en, ja)
 for i, (en, ja) in enumerate(tr.EMBLEMS.items()):
-    patch_slot(0x214068 + 16 * i, en, ja)
+    patch_slot(EMBLEM_BASE + 16 * i, en, ja)
 
 # 3b) ホイールの命令説明(関数内leaを直接付け替え)
 for a, en, ja in tr.WHEEL_LEA + tr.ACTION_LEA:
@@ -123,7 +124,7 @@ for a, en, ja in tr.WHEEL_LEA + tr.ACTION_LEA:
 for slot, en, ja in tr.HINT_SLOTS: patch_slot(slot, en, ja)
 
 # 3d) インライン文字列コピーを std::string(const char*, n) コンストラクタ(0x6000)呼び出しに置換
-CTOR = 0x6000
+CTOR = 0x6060   # 0.3.0 では 0x6000
 assert bytes(raw[tx_off(CTOR):tx_off(CTOR)+5]) == bytes.fromhex('48896c2410'), 'ctor prologue'
 pdsec = [s for s in secs if s.Name.startswith(b'.pdata')][0]
 funcs = [struct.unpack_from('<III', raw, pdsec.PointerToRawData + i)[:2] for i in range(0, pdsec.Misc_VirtualSize, 12)]
