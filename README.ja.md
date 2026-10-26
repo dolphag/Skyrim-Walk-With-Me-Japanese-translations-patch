@@ -40,7 +40,7 @@ Nexusの配布物 `0.3.0-1`・`0.2.5-1`・`0.1.0-1` は、上の各版と梱包�
 ## 再現手順
 英語版 README の "Reproduce" を参照してください。元DLLの SHA-256 は
 `8b8d398a146415d17bb659003121871a41566e109ca78c461ea3854e6cff3c40`、出力DLLは
-`577dca9fd583d7ff2ddcd1b02e131a4cd8bc2f56de910b626b6fea6a97b188e5` になります。
+`1f583edadfdc2e34df1ac822ed5cfa24c06dc5867cbb55db2f4ae56ba0b57634` になります。
 
 ## ライセンス・謝辞
 - パッチ後の `Wayfarer.dll` は、GPL-3.0-or-later(追加の例外つき)の原作DLLの改変版です。スクリプトと対応表も同条件で

@@ -15,7 +15,7 @@ description: Wayfarer.dll(Walk With Me)の日本語化パッチを作る・直�
 1. 訳文・パッチ箇所(アドレス)・定数は `tools/trans_ja.py`。文字列の分類は `tools/tier1.py` / `tier1.json`。
 2. 生成: `mkdir -p out && python3 -I tools/build_patch.py wwm/SKSE/Plugins/Wayfarer.dll out/Wayfarer.dll`(`changes.json` も出る)
 3. 検証: `python3 -I tools/verify.py`(変更バイトがすべて記録されているか、参照が新セクション `.jpn` に届くか)
-4. 期待する出力 SHA-256(0.3.1 テスト版 4): `577dca9fd583d7ff2ddcd1b02e131a4cd8bc2f56de910b626b6fea6a97b188e5`。訳文を変えたら変わるので、README の値も更新する。
+4. 期待する出力 SHA-256(0.3.1 テスト版 4): `1f583edadfdc2e34df1ac822ed5cfa24c06dc5867cbb55db2f4ae56ba0b57634`。訳文を変えたら変わるので、README の値も更新する。
 5. 翻訳表: `translations_en_ja.csv`(UTF-8 BOM、ヘッダ行あり)を更新する。
 6. フォント: `python3 -I tools/build_font.py NotoSansJP-Medium.ttf <Cinzel ttf> font/`(OFL。Cinzel のファミリー名は変更する)。訳文に使う漢字が増えたら再ビルド。
 7. テスト版 zip を作ってユーザーに渡す(経路は CLAUDE.md の「最初のセッションで確認すること」)。

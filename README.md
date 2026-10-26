@@ -73,7 +73,7 @@ python3 -I tools/build_patch.py wwm/SKSE/Plugins/Wayfarer.dll out/Wayfarer.dll
 python3 -I tools/verify.py
 ```
 
-Expected output SHA-256: `577dca9fd583d7ff2ddcd1b02e131a4cd8bc2f56de910b626b6fea6a97b188e5`
+Expected output SHA-256: `1f583edadfdc2e34df1ac822ed5cfa24c06dc5867cbb55db2f4ae56ba0b57634`
 
 Font (needs `NotoSansJP-Medium.ttf` and the original Cinzel Decorative TTF, both SIL OFL 1.1):
 
