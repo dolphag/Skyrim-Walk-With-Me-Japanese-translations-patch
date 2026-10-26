@@ -312,3 +312,10 @@ Curious first,好奇心旺盛な従者が先
 Roles and tactics,役割と戦術
 Needs Fight With Me,Fight With Meが必要
 "Give each companion a role, a focus and a place in battle. Comes with Fight With Me.",従者それぞれに、役割・狙う相手・戦闘での持ち場を与える。Fight With Meを導入すると使える。
+Stick: aim    A: order    D-pad down: party actions    B: back,スティック: 方向を選ぶ    A: 命令    十字キー下: Party Actions    B: 戻る
+Click / 1-7: order    Tab: party actions    Esc: back,クリック / 1-7: 命令    Tab: Party Actions    Esc: 戻る
+Stick / D-pad: choose    A: select    Up: party orders    B: back,スティック / 十字キー: 選ぶ    A: 決定    上: Party Orders    B: 戻る
+Click / arrows: choose    Enter: select    Tab: party orders    Esc: back,クリック / 方向キー: 選ぶ    Enter: 決定    Tab: Party Orders    Esc: 戻る
+In Companion,Companionで有効
+your partner,指定の相手
+With ,相手: 

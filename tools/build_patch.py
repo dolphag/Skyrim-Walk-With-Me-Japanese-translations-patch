@@ -176,6 +176,20 @@ for la, ia, en, ja in tr.FMT_SITES:
     assert bytes(raw[tx_off(ia):tx_off(ia)+7]) == bytes.fromhex('48c785a8080000') and struct.unpack_from('<I', raw, fo)[0] == len(en)
     data[fo:fo+4] = struct.pack('<I', len(jb)); changes.append((fo, 4, 'fmtlen@%x' % ia))
 
+# 3e2) 前置詞つき連結 (lea r9 + 長さ即値 + 上限チェック)
+for la, ia, ca, en, ja in tr.PREFIX_SITES:
+    ins = next(md.disasm(raw[tx_off(la):tx_off(la)+15], IB + la))
+    assert ins.mnemonic == 'lea' and ins.size == 7 and ins.disp_offset == 3 and ins.op_str.startswith('r9,')
+    mem = [o for o in ins.operands if o.type == X86_OP_MEM][0]
+    old_va = la + 7 + mem.mem.disp
+    assert cstr_at(old_va) == en.encode()
+    jb = ja.encode('utf-8')
+    patch_lea({'addr': la, 'dispoff': 3}, old_va, add(jb + b'\0')); n_sites += 1
+    assert bytes(raw[tx_off(ia):tx_off(ia)+5]) == bytes.fromhex('48c7442420') and struct.unpack_from('<I', raw, tx_off(ia)+5)[0] == len(en)
+    data[tx_off(ia)+5:tx_off(ia)+9] = struct.pack('<I', len(jb)); changes.append((tx_off(ia)+5, 4, 'prefixlen@%x' % ia))
+    assert bytes(raw[tx_off(ca):tx_off(ca)+3]) == bytes.fromhex('4883f8') and raw[tx_off(ca)+3] == len(en) and len(jb) < 128
+    data[tx_off(ca)+3] = len(jb); changes.append((tx_off(ca)+3, 1, 'prefixchk@%x' % ca))
+
 # 3f) 定数の付け替え (movss xmm,[rip+disp])
 for a, oldv, newv in tr.CONST_SITES:
     ins = next(md.disasm(raw[tx_off(a):tx_off(a)+15], IB + a))

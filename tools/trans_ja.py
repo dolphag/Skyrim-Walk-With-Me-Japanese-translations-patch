@@ -392,6 +392,15 @@ WHEEL_LEA = [
 # ---- Party Actions(ホイール) ----
 # (a) strlen経由でstd::stringを作る箇所: lea のみ付け替え
 ACTION_LEA = [
+ # 下端の操作ヒント(ホイールと Party Actions の画面で、パッドとキーボードの2種類ずつ。NUL終端でテキスト描画へ渡される)
+ (0xca4f4, "Stick: aim    A: order    D-pad down: party actions    B: back",
+   "スティック: 方向を選ぶ    A: 命令    十字キー下: Party Actions    B: 戻る"),
+ (0xca4fb, "Click / 1-7: order    Tab: party actions    Esc: back",
+   "クリック / 1-7: 命令    Tab: Party Actions    Esc: 戻る"),
+ (0xca5d7, "Stick / D-pad: choose    A: select    Up: party orders    B: back",
+   "スティック / 十字キー: 選ぶ    A: 決定    上: Party Orders    B: 戻る"),
+ (0xca5de, "Click / arrows: choose    Enter: select    Tab: party orders    Esc: back",
+   "クリック / 方向キー: 選ぶ    Enter: 決定    Tab: Party Orders    Esc: 戻る"),
  (0xc7e35, "Saving...",            "保存中..."),
  (0xc7e3e, "Settle when you stop", "止まったらくつろぐ"),
  (0xc7e45, "Keep to your feet",    "立ったまま待機"),
@@ -428,6 +437,8 @@ INLINE = [
  (0xc8592, 0xc85d2, 0x860, "Any companion",      "どの従者でも"),
  (0xc86fe, 0xc8737, 0x860, "Not in this style",  "この命令では不可"),
  (0xc8769, 0xc87a9, 0x880, "Curious first",      "好奇心旺盛な従者が先"),
+ (0xc83ce, 0xc8401, 0x860, "In Companion",      "Companionで有効"),
+ (0xc823a, 0xc826d, 0x880, "your partner",      "指定の相手"),
 ]
 # (d) fmt 書式(ポインタ+長さ): (lea addr, 長さ即値addr+7, 原文, 訳)  ※第2引数("s")は未使用になる
 FMT_SITES = [(0xc7c9a, 0xc7ca8, "{} companion{} ready", "{}人の従者が準備完了")]
@@ -439,3 +450,7 @@ CONST_SITES = [
  (0xb9ac5, 0.88, 1.25),    # Party Actions 下部の説明: 最大幅 (mulss)
  (0xca4b9, 0.017, 0.024),  # 下端の操作ヒント(Click / arrows: ...): 文字サイズ上限 (mulss)
 ]
+
+# (f) 前置詞つきの連結 "With " + 相手の名前: operator+ (0xb33f0) に 前置詞ポインタ(r9)と長さ(スタック [rsp+0x20])を渡す箇所。
+#     (lea r9 の addr, 長さ即値 mov qword [rsp+0x20],imm32 の addr, 上限チェック cmp rax,imm8 の addr, 原文, 訳)
+PREFIX_SITES = [(0xc8394, 0xc838b, 0xc8360, "With ", "相手: ")]
