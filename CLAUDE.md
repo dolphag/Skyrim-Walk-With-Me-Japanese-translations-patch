@@ -48,5 +48,5 @@ Fight With Me / Paths のパッチは**別リポジトリ**(<https://github.com/
 
 ## Nexus の確認
 - WebFetch は Nexus で失敗しやすい(PROVENANCE_REQUIRED)。ブラウザ(Claude in Chrome 等)が使える場合はそれで開く。使えない場合は、ユーザーに確認を依頼する。
-- API で引く手段: skill `nexus-check`(`tools/nexus_query.py`、キー不要、版・ファイル一覧は FWM リポジトリで実測済み)。環境が api.nexusmods.com を許可している必要がある。**権限(Permissions)は API に無い** → ブラウザかユーザー確認。ダウンロード(`NEXUS_API_KEY` 要)は未検証。詳細は `docs/nexus-api-notes.md`。
+- API で引く手段: skill `nexus-check`(`tools/nexus_query.py`、キー不要、版・ファイル一覧は実測済み)。環境が api.nexusmods.com を許可している必要がある。**権限(Permissions)と配布 zip のダウンロードは API で取れない**(後者は非プレミアムで 403)→ ブラウザかユーザー確認、zip はユーザーが添付。詳細は `docs/nexus-api-notes.md`。
 - ページの権限・版・ファイル名・更新時刻は、実際に読み取ったものだけを事実として扱う。
