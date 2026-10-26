@@ -45,6 +45,8 @@ The DLL is a modified version of the original; corresponding source = this patch
 (the GitHub repository, tag wwm-0.3.1:
 https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.1) plus the original source: the author's GitHub
 https://github.com/fatalCMD/walk-with-me, main branch, commit 1ccaa82c53e65a2feaca171a6182445df4f03993 ("Walk With Me 0.3.1", 2026-10-24; the author has no 0.3.1 tag as of 2026-10-26). Fonts: SIL OFL 1.1 (LICENSES/).
+Permissions of the original mod (Nexus "Permissions and credits") were checked on 2026-10-26: modification and
+re-uploading are allowed as long as the original creator, hashhbbrown, is credited.
 Translations were produced with AI assistance (Claude, Anthropic) and checked in game. No warranty; please do
 not ask the original author for support for this patch.
 

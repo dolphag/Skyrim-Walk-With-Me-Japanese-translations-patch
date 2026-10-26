@@ -87,6 +87,7 @@ python3 -I tools/build_font.py NotoSansJP-Medium.ttf <Cinzel ttf> font/
   The scripts and the translation table in this repository are provided under the same terms.
   The original program source is the author's repository, `main` branch, commit `1ccaa82c53e65a2feaca171a6182445df4f03993` ("Walk With Me 0.3.1", 2026-10-24):
   <https://github.com/fatalCMD/walk-with-me/tree/1ccaa82c53e65a2feaca171a6182445df4f03993> (the author has no `v0.3.1` tag as of 2026-10-26; the 0.3.0 source is the tag `v0.3.0`, commit `dae2c415a8f6d98b1b1c31c23e454ebf38471cdc`).
+- Permissions of the original mod (Nexus "Permissions and credits") were checked on 2026-10-26: modification and re-uploading are allowed with credit to the original creator.
 - Fonts: SIL OFL 1.1 (Noto Sans JP, Cinzel Decorative), full texts in [`licenses/`](licenses/).
 - Many thanks to **hashhbbrown** for Walk With Me.
 - The Japanese translations were produced with AI assistance (Claude, Anthropic) and checked in game.

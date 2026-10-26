@@ -1,0 +1,7 @@
+Nexus の File credits 欄に入れる内容(案。原MODの File credits を参考に、このパッチが含むものだけ)
+hashhbbrown — Walk With Me(原作者。DLL の元)
+Natanael Gama — Cinzel Decorative(フォントの Latin 部分。SIL OFL 1.1)
+Adobe / Google — Noto Sans JP(フォントの日本語部分。SIL OFL 1.1)
+(原MODの他のクレジット(SKSE team、alandtse と CommonLibSSE-NG、meh321、QTR-Modding、Xing / GiraPomba、Ersh、KEI997 など)は、
+ DLL に含まれる/連携する第三者の成果です。配布 zip の ThirdParty/ に原MOD同梱の通知を収録しています。)
+権限の確認日: 2026-10-26(ユーザーが Nexus のページから転記)。

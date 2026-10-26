@@ -65,6 +65,8 @@ SKSE Menu Framework は日本語グリフを ImGui 標準の約3000字(GetGlyphR
 - 本パッチの Wayfarer.dll は、Walk With Me 0.3.1 の Wayfarer.dll(GPL-3.0-or-later、追加の例外つき)を
   2026-10-26 に改変した派生物です。改変内容: 文字列と一部の描画定数のバイナリパッチ、および
   SKSE/Plugins/Fonts/WalkWithMeInscription.ttf の差し替え(日本語グリフの追加)。
+- 原MODの配布権限(Nexus の Permissions and credits)を 2026-10-26 に確認しました。作者のクレジットを表示することを条件に、
+  改変(バグ修正・機能改善)と他サイトでの再配布が許可されています。原作者は hashhbbrown さんです。
 - 本パッチ全体も GPL-3.0-or-later で提供します。全文は LICENSE、原作者が付した例外は EXCEPTIONS.md と
   LICENSING.md、第三者の通知は ThirdParty/ にあります(原MOD同梱のものをそのまま収録)。
 - 無保証です。本パッチの不具合を原作者に問い合わせないでください。

@@ -47,6 +47,7 @@ Nexusの配布物 `0.3.0-1`・`0.2.5-1`・`0.1.0-1` は、上の各版と梱包�
   提供します([`LICENSE`](LICENSE)、[`EXCEPTIONS.md`](EXCEPTIONS.md)、[`LICENSING.md`](LICENSING.md))。
   元のソースは、原作者のリポジトリの main ブランチ、コミット `1ccaa82c53e65a2feaca171a6182445df4f03993`("Walk With Me 0.3.1"、2026-10-24)です:
   <https://github.com/fatalCMD/walk-with-me/tree/1ccaa82c53e65a2feaca171a6182445df4f03993>(2026-10-26時点で `v0.3.1` のタグはありません。0.3.0 のソースはタグ `v0.3.0`、コミット `dae2c415a8f6d98b1b1c31c23e454ebf38471cdc`)。
+- 原MODの配布権限(Nexus の Permissions and credits)を 2026-10-26 に確認しました。原作者のクレジット表示を条件に、改変と再配布が許可されています。
 - フォントは SIL OFL 1.1([`licenses/`](licenses/))。
 - 原作者 hashhbbrown さんに感謝します。
 - 訳文はAI(Claude, Anthropic)の支援で作成し、ゲーム内で動作確認しています。
