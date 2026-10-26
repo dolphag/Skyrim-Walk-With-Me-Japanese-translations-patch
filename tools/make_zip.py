@@ -4,7 +4,7 @@
   python3 -I tools/make_zip.py test out/Wayfarer.dll <N> --memo memo.txt [--font font/WalkWithMeInscription.ttf]
     -> out/WWM_test<N>.zip  (SKSE/Plugins/Wayfarer.dll, [SKSE/Plugins/Fonts/WalkWithMeInscription.ttf], テスト用メモ.txt)
   python3 -I tools/make_zip.py release out/Wayfarer.dll font/WalkWithMeInscription.ttf --version 0.3.0-1 --base <前回配布 zip を展開したディレクトリ> [--out out]
-    -> out/WWM_JP_<版>.zip  (Nexus 配布用。構成は 0.3.0-1 の公開 zip と同じ)
+    -> out/Walk With Me - Japanese Translations Patch <版>.zip  (Nexus 配布用。構成は 0.3.0-1 の公開 zip と同じ)
     README は release/README_{Japanese,English}.txt の {ORIG_SHA} {OUT_SHA} を置換して作る。更新履歴に "Version <版>" の項がなければ失敗する。
     LICENSE / EXCEPTIONS.md / LICENSING.md / LICENSES/OFL_*.txt はリポジトリのもの。
     LICENSES/Wayfarer-MIT.txt と ThirdParty/ は原作の配布物の写しなのでリポジトリに置かず、--base から取る。"""
@@ -40,7 +40,7 @@ if a.mode == 'release':
             full = os.path.join(d, f); entries['ThirdParty/' + os.path.relpath(full, tp).replace(os.sep, '/')] = open(full, 'rb').read()
     entries['SKSE/Plugins/Wayfarer.dll'] = dll
     entries['SKSE/Plugins/Fonts/WalkWithMeInscription.ttf'] = open(a.font, 'rb').read()
-    path = os.path.join(a.out, 'WWM_JP_%s.zip' % a.version)
+    path = os.path.join(a.out, 'Walk With Me - Japanese Translations Patch %s.zip' % a.version)
     with zipfile.ZipFile(path, 'w') as z:
         for k in sorted(entries): put(z, k, entries[k])
     print(path, 'out_sha', out_sha)

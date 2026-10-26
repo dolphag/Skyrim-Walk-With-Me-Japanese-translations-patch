@@ -12,7 +12,7 @@ works by modifying the DLL directly.
 
 | Patch | For mod version | Source (tag) | Original DLL SHA-256 → patched DLL SHA-256 |
 |---|---|---|---|
-| Walk With Me patch **0.3.1** | Walk With Me 0.3.1 | repository root, tag [`wwm-0.3.1`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.1) | `8b8d398a…3c40` → `44487bc2…bfd9` |
+| Walk With Me patch **0.3.1-1** | Walk With Me 0.3.1 | repository root, tag [`wwm-0.3.1-1`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.1-1) | `8b8d398a…3c40` → `44487bc2…bfd9` |
 | Walk With Me patch **0.3.0** | Walk With Me 0.3.0 | repository root, tag [`wwm-0.3.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.0) | `a0e90379…97b5b4` → `4541381d…969a` |
 | Walk With Me patch **0.2.5** | Walk With Me 0.2.5 | [`wwm-0.2.5/`](wwm-0.2.5/), tag [`wwm-0.2.5`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.2.5/wwm-0.2.5) | `46cde5e6…caca15a` → `a0463f07…1e9ac9` |
 | Fight With Me patch **0.1.0** | Fight With Me 0.1.0 | this repository's tag [`fwm-0.1.0`](https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/fwm-0.1.0/fwm) | `23b99b6b…35bc32d` → `059d0785…aae47` |

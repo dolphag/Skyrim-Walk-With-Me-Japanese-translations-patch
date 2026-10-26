@@ -10,7 +10,7 @@ description: WWM 日本語化パッチのリリース準備(配布 zip、README�
 ## 順序(守る)
 1. 実機確認が済んでいること(ユーザーの「OK」)。
 2. **原 MOD の Nexus ページの権限をその時点で確認**(Permissions and credits)。確認日を README に書く。変更があれば止めてユーザーに報告。
-3. 版番号を決める: 原 MOD に連動(WWM 0.3.0-N)。**Nexus の版と zip 内 README の版を一致させる**。
+3. 版番号を決める: 原 MOD に連動(WWM 0.3.1-N。0.3.1 の初回は 0.3.1-1 とユーザーが決めた)。**Nexus の版と zip 内 README の版を一致させる**。
 4. リポジトリの README(日本語は `README.ja.md`、英語は `README.md`)、翻訳表 CSV、元 DLL / 出力 DLL の SHA-256 を更新する。
    配布 zip 内の README(日本語・英語)も、**更新履歴(Changelog。最新を先頭に追記)**、変更点、確認日、版を直す。
    README の雛形は `release/README_Japanese.txt` / `README_English.txt`(0.3.0-1 の公開 zip から作成。`{ORIG_SHA}` `{OUT_SHA}` を置換)。末尾に更新履歴欄があるので、**新しい版では「Version <版>」の項を先頭に追記する**(追記がないと make_zip が失敗する)。変更点・確認日も雛形で直す。0.3.0-1 の公開 zip との同一性は、更新履歴欄の追加前(コミット 8d45ea4)で確認済み。

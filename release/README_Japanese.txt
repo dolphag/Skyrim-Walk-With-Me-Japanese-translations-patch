@@ -71,8 +71,8 @@ SKSE Menu Framework は日本語グリフを ImGui 標準の約3000字(GetGlyphR
   LICENSING.md、第三者の通知は ThirdParty/ にあります(原MOD同梱のものをそのまま収録)。
 - 無保証です。本パッチの不具合を原作者に問い合わせないでください。
 - 対応ソース(Corresponding Source)は次の2つです。
-  1. 本パッチのソース: GitHub のタグ wwm-0.3.1
-     https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.1
+  1. 本パッチのソース: GitHub のタグ wwm-0.3.1-1
+     https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.1-1
      翻訳表、パッチ生成スクリプト、フォント生成スクリプト、検証スクリプト、再現手順(README.md)を含みます。
   2. 元DLLのソース: 原作者のGitHub https://github.com/fatalCMD/walk-with-me の
      main ブランチのコミット 1ccaa82c53e65a2feaca171a6182445df4f03993("Walk With Me 0.3.1"、2026-10-24)。
@@ -90,7 +90,7 @@ SKSE Menu Framework は日本語グリフを ImGui 標準の約3000字(GetGlyphR
 - 設定ページの表示には、SKSE Menu Framework 側で日本語フォント(Noto Sans JP)の設定が必要です(上記「フォント」)。
 
 ■ 更新履歴(最新を先頭に。新しい版では、ここに「Version <版>」の項を追加する)
-* Version 0.3.1
+* Version 0.3.1-1
    * Walk With Me 0.3.1 に対応しました(DLL を作り直しています。0.3.0 用の DLL は 0.3.1 では使えません)。
    * Hold hands の説明文を、0.3.1 の仕様(相手未選択なら、見ている従者か最寄りの従者)に合わせて更新しました。
    * Hold hands タイルの副表示(最寄りの従者 / 相手: ○○ / Companion時のみ)と、手つなぎ相手の「なし - 選んでください」を日本語化しました。
