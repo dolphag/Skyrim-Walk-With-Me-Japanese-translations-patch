@@ -22,7 +22,7 @@
 [b]本体を更新するときは、先に本パッチを無効化(削除)してください。[/b]古いDLLが新しい本体を上書きして、不具合やクラッシュの原因になります。
 
 [b]日本語になるもの / ならないもの[/b]
-設定ページ、命令の説明文、命令ホイールや Party Actions の説明文が日本語になります。
+設定ページ、命令の説明文、命令ホイールや Party Actions の説明文・タイルの副題、下端の操作ヒントが日本語になります。
 ホイールのモード名・タイル名、HUD、通知、各種ウィンドウなどは英語のままです(文字列がコード内に埋め込まれていて安全に差し替えられないため)。
 
 [b]原版からの変更点[/b]
@@ -72,7 +72,7 @@ Install above the original mod. INI and saves are untouched; disabling the patch
 [b]Before updating Walk With Me, disable/remove this patch first[/b], or its old DLL overwrites the new one and can cause errors or crashes.
 
 [b]Translated / not translated[/b]
-Settings pages, order descriptions, and the descriptions on the order wheel and Party Actions are translated.
+Settings pages, order descriptions, the descriptions and tile subtitles on the order wheel and Party Actions, and the bottom control hints are translated.
 Wheel mode/tile names, the HUD, notifications, windows and similar parts stay in English (the strings are embedded in code and cannot be replaced safely).
 
 [b]Changes to the original[/b]
@@ -85,7 +85,7 @@ Wheel mode/tile names, the HUD, notifications, windows and similar parts stay in
 
 [b]License / source[/b]
 The DLL is GPL-3.0-or-later like the original (with the original's additional exceptions); the font is SIL OFL 1.1. The modification date is stated in the README bundled with each file.
-Corresponding source, translation table and build scripts are in the tags (wwm-VERSION) of [url=https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch]GitHub[/url]. The original source is in the tags (vVERSION) of [url=https://github.com/fatalCMD/walk-with-me]the author's GitHub[/url].
+Corresponding source, translation table and build scripts are in the tags (wwm-VERSION) of [url=https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch]GitHub[/url]. The original source is in the tags (vVERSION) of [url=https://github.com/fatalCMD/walk-with-me]the author's GitHub[/url] (for 0.3.1, which has no tag, the commit is given in the bundled README).
 
 [b]AI disclosure[/b]
 Translations and this description were produced with AI assistance (Claude). Please report mistranslations or layout problems in the comments.

@@ -1,0 +1,42 @@
+Walk With Me - Japanese Translations Patch 0.3.1-1  Nexus 投稿メモ(2026-10-26 作成)
+
+■ ファイル
+- ファイル名: Walk With Me - Japanese Translations Patch 0.3.1-1.zip
+- バージョン欄: 0.3.1-1(zip 内 README の版と一致)
+- 対象: Walk With Me 0.3.1 のみ。出力 DLL SHA-256 44487bc2398c6d21996e548256445bfcc9a9fa60d8b6a46ff32361c1e8a1bfd9
+- 旧版(0.3.0-1)は Old files へ移す。
+
+■ Changelog(Nexus の更新履歴欄・日本語)
+0.3.1-1
+・Walk With Me 0.3.1 に対応(DLL を作り直しています。0.3.0 用のパッチは 0.3.1 では使えません)
+・Hold hands の説明文を、0.3.1 の仕様(相手未選択なら、見ている従者か最寄りの従者)に合わせて更新
+・Hold hands タイルの副表示(最寄りの従者 / 相手: ○○ / Companion時のみ)と、手つなぎ相手の「なし - 選んでください」を日本語化
+・下端の操作ヒント(命令ホイールと Party Actions の画面)を日本語化
+・原MODの更新前に、必ず本パッチを無効化してください
+
+■ Changelog (English)
+0.3.1-1
+- Updated for Walk With Me 0.3.1 (the DLL was rebuilt; the 0.3.0 patch does not work with 0.3.1).
+- Hold hands description updated for 0.3.1 (with no partner chosen it picks the companion you look at, or the nearest one).
+- Translated the Hold hands tile subtitles (nearest companion / with <name> / Companion only) and the partner list entry "None - choose one".
+- Translated the bottom control hints on the order wheel and Party Actions screens.
+- Before updating Walk With Me, disable/remove this patch first.
+
+■ File credits 欄
+hashhbbrown — Walk With Me(原作者。DLL の元)
+Natanael Gama — Cinzel Decorative(フォントの Latin 部分。SIL OFL 1.1)
+Adobe / Google — Noto Sans JP(フォントの日本語部分。SIL OFL 1.1)
+(詳細は release/NEXUS_FILE_CREDITS.txt)
+
+■ GitHub タグ
+- タグ名: wwm-0.3.1-1 / 対象: main の、この版の README を含むコミット(下記「注意」の main 統合後の HEAD)
+- README・zip 内 README が参照するソースのタグです。
+
+■ 注意
+1. 0.3.1 の DLL に対する実機確認は、設定メニュー・ホイール・下端ヒント・Hold hands タイルまで。最終版の DLL 全体での長時間プレイ確認はしていない。
+2. Fight With Me 0.3.1 との連携(原作 0.3.1 の「FWM が戦闘を仕切る」変更)が、FWM 側の日本語化パッチに影響するかは未確認。
+3. 設定画面の長い説明文(Hold hands 関連)は原文が変わっていないため訳も同じ。0.3.1 の自動選択の仕様とずれている可能性がある。
+4. 原作は 0.3.1 のタグがなく、README にはコミット 1ccaa82c… を書いてある。原作者がタグを付けたら、次の版で参照先をタグに直す。
+5. 権限(Permissions and credits)は 2026-10-26 にユーザーが転記したものを確認。リリース直前に変更がないか、念のため再確認するとよい。
+6. アップロード後は、版・ファイル名・サイズ・説明・File credits 欄を確認する(Nexus は取得できないので、ページの文面をセッションに貼ってもらう)。
+7. 次の版: 原作が 0.3.2 → 0.3.2-1、パッチだけの修正 → 0.3.1-2(ユーザー決定)。
