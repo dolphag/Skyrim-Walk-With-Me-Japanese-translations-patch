@@ -35,7 +35,7 @@
 
 [b]ライセンス・ソース[/b]
 DLLは本体と同じ GPL-3.0-or-later(本体の追加の例外つき)、フォントは SIL OFL 1.1 です。改変日は、各ファイルに同梱の README に記載しています。
-対応するソース・翻訳表・生成スクリプトは [url=https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch]GitHub[/url] のタグ(wwm-バージョン番号)にあります。本体のソースは [url=https://github.com/fatalCMD/walk-with-me]作者のGitHub[/url] のタグ(v バージョン番号)です。
+対応するソース・翻訳表・生成スクリプトは [url=https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch]GitHub[/url] のタグ(wwm-バージョン番号)にあります。本体のソースは [url=https://github.com/fatalCMD/walk-with-me]作者のGitHub[/url] のタグ(v バージョン番号)です(0.3.1 はタグがないため、コミットを同梱 README に記載しています)。
 
 [b]AIの利用[/b]
 訳文と本説明文の作成にAI(Claude)を使用しています。誤訳や表示崩れがあればコメントでお知らせください。

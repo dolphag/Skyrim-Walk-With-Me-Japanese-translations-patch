@@ -1,4 +1,4 @@
-Walk With Me - Japanese Translations Patch (対象: Walk With Me 0.3.0)
+Walk With Me - Japanese Translations Patch (対象: Walk With Me 0.3.1)
 =====================================================================
 
 原作者 hashhbbrown さんへ: 素晴らしいMODを公開してくださり、ありがとうございます。
@@ -36,7 +36,7 @@ Wayfarer.dll も差し替え前のものに戻してください(日本語の説
 日本語だと小さく見えたため、次の文字を大きくしています(いずれもDLL内の定数。他の文字は変えていません)。
   ・命令ホイール中央の説明: サイズ上限 約1.4倍(0.02→0.028)、最大幅 0.33→0.40
   ・Party Actions 下部の説明: サイズ上限 約1.4倍(0.02→0.028)、最大幅 0.88→1.25
-  ・下端の操作ヒント(Click / arrows: ... など): サイズ上限 約1.4倍(0.017→0.024)
+  ・下端の操作ヒント(日本語化済み): サイズ上限 約1.4倍(0.017→0.024)
 Party Actions のタイル副題の大きさは変えていません。
 
 ■ 漢字の制限
@@ -44,9 +44,9 @@ SKSE Menu Framework は日本語グリフを ImGui 標準の約3000字(GetGlyphR
 (祠・壷・梱・繋など)は「?」になります。訳文は範囲内の漢字だけを使っています。
 
 ■ 導入
-1. 元の Walk With Me 0.3.0 を導入した状態で、このMODを元より下(後勝ち)に置いて有効化。
+1. 元の Walk With Me 0.3.1 を導入した状態で、このMODを元より下(後勝ち)に置いて有効化。
 2. Wayfarer.ini とセーブには影響しません。無効化すれば元に戻ります。
-3. 対象は 0.3.0 のみ(アドレス固定のパッチ)です。
+3. 対象は 0.3.1 のみ(アドレス固定のパッチ)です。
 元DLL SHA-256 : {ORIG_SHA}
 パッチ後DLL   : {OUT_SHA}
 
@@ -55,27 +55,26 @@ SKSE Menu Framework は日本語グリフを ImGui 標準の約3000字(GetGlyphR
   (コード内に埋め込みのため安全に差し替えられない)、通知メッセージ、ログ、ESP、会話文。
   ホイールで日本語化したのは「説明文」のみです(命令ホイール中央の説明7種、Party Actions のタイルの副題と
   下部の説明)。タイル名・見出し・モード名は英語のままです。
-  Party Actions のうち次は英語のままです: "With <相手の名前>"、"In Companion"、"Available in game"、
-  "Walk With Me is disabled"、"ACTIVE ORDER / ..."、操作ヒント(Click / 1-7: order ... など)。
+  Party Actions のうち次は英語のままです: "Available in game"、"Walk With Me is disabled"、"ACTIVE ORDER / ..."。
+  下端の操作ヒントは日本語化しました(「Party Orders」「Party Actions」は画面の見出しが英語なので英語のままです)。
 - 別MOD「Fight With Me」の画面は本パッチの対象外です。日本語化は別ページ「Fight With Me - Japanese Translations Patch」で提供します(Party Actions の「Battle plan」タイルの副題と説明は、本パッチで日本語になります)。
 - 英語のまま: ページ名、Classic/TETHER/Nearest、"Unbound"(キー割り当て欄)、"Press a key or chord..."、
   "Selected companion"、" at "、" (not nearby)"。
 
 ■ ライセンスと改変の告知(GPL-3.0-or-later)
-- 本パッチの Wayfarer.dll は、Walk With Me 0.3.0 の Wayfarer.dll(GPL-3.0-or-later、追加の例外つき)を
-  2026-10-11 に改変した派生物です。改変内容: 文字列と一部の描画定数のバイナリパッチ、および
+- 本パッチの Wayfarer.dll は、Walk With Me 0.3.1 の Wayfarer.dll(GPL-3.0-or-later、追加の例外つき)を
+  2026-10-26 に改変した派生物です。改変内容: 文字列と一部の描画定数のバイナリパッチ、および
   SKSE/Plugins/Fonts/WalkWithMeInscription.ttf の差し替え(日本語グリフの追加)。
 - 本パッチ全体も GPL-3.0-or-later で提供します。全文は LICENSE、原作者が付した例外は EXCEPTIONS.md と
   LICENSING.md、第三者の通知は ThirdParty/ にあります(原MOD同梱のものをそのまま収録)。
 - 無保証です。本パッチの不具合を原作者に問い合わせないでください。
 - 対応ソース(Corresponding Source)は次の2つです。
-  1. 本パッチのソース: GitHub のタグ wwm-0.3.0
-     https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.0
+  1. 本パッチのソース: GitHub のタグ wwm-0.3.1
+     https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/wwm-0.3.1
      翻訳表、パッチ生成スクリプト、フォント生成スクリプト、検証スクリプト、再現手順(README.md)を含みます。
-  2. 元DLLのソース: 原作者のGitHub https://github.com/fatalCMD/walk-with-me のタグ v0.3.0
-     (コミット dae2c415a8f6d98b1b1c31c23e454ebf38471cdc)。元DLL SHA-256 が上記と一致するものが対象です。
-     (原作者は同梱の Walk-With-Me-0.3.0-Source.zip の提供を述べていますが、2026-10-11時点で原MODのFilesタブには
-     見当たらないため、GitHubを参照先としています。)
+  2. 元DLLのソース: 原作者のGitHub https://github.com/fatalCMD/walk-with-me の
+     main ブランチのコミット 1ccaa82c53e65a2feaca171a6182445df4f03993("Walk With Me 0.3.1"、2026-10-24)。
+     2026-10-26 時点で、原作者のリポジトリに 0.3.1 のタグはありません。元DLL SHA-256 が上記と一致するものが対象です。
 - 同梱フォントは SIL OFL 1.1(LICENSES/)。Noto Sans JP と Cinzel Decorative の派生で、予約名「Cinzel」は
   使っていません。
 
@@ -84,10 +83,15 @@ SKSE Menu Framework は日本語グリフを ImGui 標準の約3000字(GetGlyphR
 誤訳や不自然な表現があれば、Nexusのコメントでお知らせください。
 
 ■ 注意
-- 対象は Walk With Me 0.3.0 のみです。他のバージョンには使わないでください。
+- 対象は Walk With Me 0.3.1 のみです。他のバージョンには使わないでください。
 - Walk With Me を更新するときは、先に本パッチを無効化(削除)してください。古い Wayfarer.dll が新しい版を上書きし、不具合やクラッシュの原因になります。
 - 設定ページの表示には、SKSE Menu Framework 側で日本語フォント(Noto Sans JP)の設定が必要です(上記「フォント」)。
 
 ■ 更新履歴(最新を先頭に。新しい版では、ここに「Version <版>」の項を追加する)
+* Version 0.3.1
+   * Walk With Me 0.3.1 に対応しました(DLL を作り直しています。0.3.0 用の DLL は 0.3.1 では使えません)。
+   * Hold hands の説明文を、0.3.1 の仕様(相手未選択なら、見ている従者か最寄りの従者)に合わせて更新しました。
+   * Hold hands タイルの副表示(最寄りの従者 / 相手: ○○ / Companionで有効)と、手つなぎ相手の「なし - 選んでください」を日本語化しました。
+   * 下端の操作ヒント(命令ホイールと Party Actions の画面)を日本語化しました。
 * Version 0.3.0-1
    * 梱包のみの修正です。MO2でのインストール時の不具合報告を受け、FOMODを廃止し、ファイル名をASCIIのみにし、ライセンスのフォルダを1つにまとめました。DLLと訳文は変更していません。
