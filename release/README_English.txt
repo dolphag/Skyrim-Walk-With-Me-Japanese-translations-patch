@@ -1,6 +1,5 @@
 Walk With Me - Japanese Translations Patch (for Walk With Me 0.3.0)
 ===================================================================
-[Package revision {VERSION}] Packaging fix only: no FOMOD installer, ASCII-only file names, one LICENSES folder. Wayfarer.dll is unchanged (same SHA-256 as before).
 
 Thanks to hashhbbrown for Walk With Me. Original mod:
 https://www.nexusmods.com/skyrimspecialedition/mods/191283
@@ -48,3 +47,7 @@ https://github.com/dolphag/Skyrim-Walk-With-Me-Japanese-translations-patch/tree/
 https://github.com/fatalCMD/walk-with-me, tag v0.3.0 (commit dae2c415a8f6d98b1b1c31c23e454ebf38471cdc). Fonts: SIL OFL 1.1 (LICENSES/).
 Translations were produced with AI assistance (Claude, Anthropic) and checked in game. No warranty; please do
 not ask the original author for support for this patch.
+
+[Changelog] (newest first; for a new release add a "Version <version>" entry here)
+* Version 0.3.0-1
+   * Packaging fix only. Removed the FOMOD installer, renamed README_日本語化.txt to README_Japanese.txt (ASCII-only file names) and merged the license folders, to avoid installer problems reported with Mod Organizer 2. The DLL and the translation are unchanged.

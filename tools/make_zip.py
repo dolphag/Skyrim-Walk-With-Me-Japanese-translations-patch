@@ -5,7 +5,7 @@
     -> out/WWM_test<N>.zip  (SKSE/Plugins/Wayfarer.dll, [SKSE/Plugins/Fonts/WalkWithMeInscription.ttf], テスト用メモ.txt)
   python3 -I tools/make_zip.py release out/Wayfarer.dll font/WalkWithMeInscription.ttf --version 0.3.0-1 --base <前回配布 zip を展開したディレクトリ> [--out out]
     -> out/WWM_JP_<版>.zip  (Nexus 配布用。構成は 0.3.0-1 の公開 zip と同じ)
-    README は release/README_{Japanese,English}.txt の {ORIG_SHA} {OUT_SHA} {VERSION} を置換して作る。
+    README は release/README_{Japanese,English}.txt の {ORIG_SHA} {OUT_SHA} を置換して作る。更新履歴に "Version <版>" の項がなければ失敗する。
     LICENSE / EXCEPTIONS.md / LICENSING.md / LICENSES/OFL_*.txt はリポジトリのもの。
     LICENSES/Wayfarer-MIT.txt と ThirdParty/ は原作の配布物の写しなのでリポジトリに置かず、--base から取る。"""
 import argparse, hashlib, os, re, zipfile
@@ -27,9 +27,9 @@ if a.mode == 'release':
     entries = {}
     for n in ('Japanese', 'English'):
         t = open(os.path.join(root, 'release/README_%s.txt' % n), encoding='utf-8').read().replace('\r\n', '\n')
-        t = t.replace('{ORIG_SHA}', orig).replace('{OUT_SHA}', out_sha).replace('{VERSION}', a.version)
-        if re.search(r'\{(ORIG_SHA|OUT_SHA|VERSION)\}', t): raise SystemExit('README に未置換のプレースホルダがあります')
-        if a.version not in t.split('\n')[2] and a.version not in t.split('\n')[1]: raise SystemExit('README の冒頭に版 %s がありません(改訂の注記を直してください): %s' % (a.version, n))
+        t = t.replace('{ORIG_SHA}', orig).replace('{OUT_SHA}', out_sha)
+        if re.search(r'\{(ORIG_SHA|OUT_SHA)\}', t): raise SystemExit('README に未置換のプレースホルダがあります')
+        if 'Version ' + a.version not in t: raise SystemExit('README の更新履歴に "Version %s" の項がありません(雛形に追記してください): %s' % (a.version, n))
         entries['README_%s.txt' % n] = t.encode('utf-8')
     for f in ('LICENSE', 'EXCEPTIONS.md', 'LICENSING.md'): entries[f] = open(os.path.join(root, f), 'rb').read()
     for f in ('OFL_CinzelDecorative.txt', 'OFL_NotoSansJP.txt'): entries['LICENSES/' + f] = open(os.path.join(root, 'licenses', f), 'rb').read()

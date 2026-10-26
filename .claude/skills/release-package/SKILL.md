@@ -13,7 +13,7 @@ description: WWM 日本語化パッチのリリース準備(配布 zip、README�
 3. 版番号を決める: 原 MOD に連動(WWM 0.3.0-N)。**Nexus の版と zip 内 README の版を一致させる**。
 4. リポジトリの README(日本語は `README.ja.md`、英語は `README.md`)、翻訳表 CSV、元 DLL / 出力 DLL の SHA-256 を更新する。
    配布 zip 内の README(日本語・英語)も、**更新履歴(Changelog。最新を先頭に追記)**、変更点、確認日、版を直す。
-   README の雛形は `release/README_Japanese.txt` / `README_English.txt`(0.3.0-1 の公開 zip から作成。`{ORIG_SHA}` `{OUT_SHA}` `{VERSION}` を置換)。新しい版では、3 行目付近の改訂の注記と変更点・確認日を雛形で直す。Changelog 欄は現状の雛形にない。必要なら雛形に追加する(0.3.0-1 の再現は崩れる)。
+   README の雛形は `release/README_Japanese.txt` / `README_English.txt`(0.3.0-1 の公開 zip から作成。`{ORIG_SHA}` `{OUT_SHA}` を置換)。末尾に更新履歴欄があるので、**新しい版では「Version <版>」の項を先頭に追記する**(追記がないと make_zip が失敗する)。変更点・確認日も雛形で直す。0.3.0-1 の公開 zip との同一性は、更新履歴欄の追加前(コミット 8d45ea4)で確認済み。
 5. zip を作る: `python3 -I tools/make_zip.py release out/Wayfarer.dll font/WalkWithMeInscription.ttf --version <版> --base <前回配布 zip の展開先>`。`--base` から `ThirdParty/` と `LICENSES/Wayfarer-MIT.txt`(原作の配布物の写し。リポジトリには置かない)を取る。LICENSE / EXCEPTIONS.md / LICENSING.md / OFL はリポジトリのもの。
 6. Nexus 用テキスト(更新履歴・説明・クレジット欄)を作る。説明の雛形: `release/NEXUS_DESCRIPTION_WWM.bbcode.txt`(2026-10 時点で公開中のもの)。
 7. **main へ統合 → main の HEAD を確認 → ユーザーがそのコミットにタグ**(`wwm-<版>` の形式)。タグは GitHub の Release で、ユーザーが付ける。
